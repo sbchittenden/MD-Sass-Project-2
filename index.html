@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sam Chittenden :: Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,400i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="css/portfolio_dark.css">
+  <link rel="stylesheet" href="css/calculator.css">
+  <link rel="stylesheet" href="css/accordion.css">
+  <link rel="stylesheet" href="css/tab-component.css">
+  <link rel="stylesheet" href="css/image_gallery.css">
+  <link rel="stylesheet" href="css/credit.css">
+  <link rel="stylesheet" href="css/color.css">
+  <link rel="stylesheet" href="css/profile_card.css">
+  <link rel="stylesheet" href="css/basic-button.css">
+  <script type="text/javascript" src="js/validator.js"></script>
+</head>
+
+<body>
+  <a id="top"></a>
+  <a id="#h-to-x-menu"></a>
+  <!-- <input type="checkbox" id="h-to-x-menu"> -->
+  <!-- off canvas menu -->
+  <!-- <label for="h-to-x-menu" id="off-canvas-menu__background"></label> -->
+  <nav id="nav-off-canvas__container">
+    <div class="nav-off-canvas__main-menu">
+      <input type="checkbox" id="off-canvas__search">
+      <input type="checkbox" id="submenu__projects">
+      <ul class="off-canvas__nav-list">
+        <li class="off-canvas__nav-list__main-item"><a href="#about">about</a></li>
+        <li class="off-canvas__nav-list__main-item">
+          <label for="submenu__projects">projects</label>
+        </li>
+        <li class="off-canvas__nav-list__main-item"><a href="#skills">skills</a></li>
+        <li class="off-canvas__nav-list__main-item"><a href="#articles">articles</a></li>
+        <li class="off-canvas__nav-list__main-item"><a href="#contact">contact</a></li>
+        <li class="off-canvas__nav-list__main-item">
+          <label for="off-canvas__search">search</label>
+        </li>
+        <li class="off-canvas-search">
+          <input type="text" class="search" required>
+          <!--  <label for="nav__search-input">search</label> -->
+          <label for="nav__search-modal__toggle"><i class="fa fa-lg fa-search" aria-hidden="true"></i></label>
+        </li>
+      </ul>
+      <div class="nav-off-canvas__sub-menu">
+        <ul class="off-canvas__nav-list">
+          <li><a href="#projects">calculator</a></li>
+          <li><a href="#projects">accordion</a></li>
+          <li><a href="#projects">tab component</a></li>
+          <li><a href="#projects">image gallery</a></li>
+          <li><a href="#projects">forms</a></li>
+          <li><a href="#projects">shopping cart</a></li>
+          <li><a href="#projects">business card</a></li>
+          <li><a href="#projects">profile sidebar</a></li>
+          <li><a href="#projects">buttons</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end off canvas menu -->
+  <a href="#bg-close" id="off-canvas-menu__background"></a>
+  <nav class="main-navigation">
+    <h1><a href="#top">s.b.chittenden</a></h1>
+    <!-- hamburger menu for off canvas -->
+    <a href="#nav-off-canvas__container" id="off-canvas-menu__burger">
+      <div class="h-to-x">
+        <span class="h-to-x-bar"></span>
+      </div>
+    </a>
+    <!-- end hamburger menu -->
+    <!-- anchor link to close hamburger -->
+    <a href="#closer" id="h-to-x-menu__closer"></a>
+    <ul class="nav_list">
+      <li><a href="#about">about</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#articles">articles</a></li>
+      <li><a href="#contact">contact</a></li>
+      <li>
+        <input type="text" class="search" id="nav__search-input" required>
+        <label for="nav__search-input">search</label>
+        <label for="nav__search-modal__toggle"><i class="fa fa-search" aria-hidden="true"></i></label>
+      </li>
+    </ul>
+  </nav>
+  <!-- search modal -->
+  <input type="checkbox" name="nav__search-modal__toggle" id="nav__search-modal__toggle">
+  <div class="nav__search-modal__container">
+    <div class="nav__search-modal__modal">
+      <h1>Search temporarily disabled.</h1>
+      <label for="nav__search-modal__toggle" class="nav__search-modal__toggle-close"><i class="fa fa-times fa-lg" aria-hidden="true"></i>
+      </label>
+      <p class="screen-width range-1">device-width &lt; 360px</p>
+      <p class="screen-width range-2">360 &lt; device-width &lt; 600px</p>
+      <p class="screen-width range-3">600 &lt; device-width &lt; 1024px</p>
+      <p class="screen-width range-4">device-width &gt; 1024px</p>
+    </div>
+  </div>
+  <!-- end search modal -->
+  <section class="section" id="landing">
+    <h1 class="greeting">Hi.<a href="#about"></a></h1>
+    <span class="greeting-v"></span>
+  </section>
+  <section class="section" id="about">
+    <div class="section__content">
+      <h1>about</h1>
+      <div class="headshot"></div>
+      <div class="headshot bubble1"></div>
+      <div class="headshot bubble2"></div>
+      <p><span class="intro-text">My name is Sam.</span> I am an aspiring full-stack developer living and working in Colorado. I have a background in print design and illustration and I currently work as the in-house graphic designer for Aspen Santa Fe Ballet, a contemporary ballet company I danced with for 15 years. I am an avid rock climber and in my spare time, if I'm not playing the drums, I can be found dangling from one of the local cliffs.</p>
+    </div>
+  </section>
+  <section class="section" id="projects">
+    <div class="section__content">
+      <h1>projects</h1>
+      <p>Below you will find some of the projects I have worked on during my progression through the <a href="https://learn.moderndeveloper.com/" class="underline" target="_blank">learn.moderndeveloper</a> program. Each tab contains a description of the project along with some images and links to both a live demo and the source code.</p>
+
+
+
+      <!-- project tabs containter-->
+      <div class="project-tabs__container">
+                <!-- accordion inputs -->
+        <input type="checkbox" id="project-1-acc" name="project-acc">
+        <input type="checkbox" id="project-2-acc" name="project-acc">
+        <input type="checkbox" id="project-3-acc" name="project-acc">
+        <input type="checkbox" id="project-4-acc" name="project-acc">
+        <input type="checkbox" id="project-5-acc" name="project-acc">
+        <input type="checkbox" id="project-6-acc" name="project-acc">
+        <input type="checkbox" id="project-7-acc" name="project-acc">
+        <input type="checkbox" id="project-8-acc" name="project-acc">
+        <input type="checkbox" id="project-9-acc" name="project-acc">
+        <!-- end accordion inputs -->
+
+        <!-- tab div -->
+        <input type="radio" id="project-1" name="project-tabs" checked>
+        <input type="radio" id="project-2" name="project-tabs">
+        <input type="radio" id="project-3" name="project-tabs">
+        <input type="radio" id="project-4" name="project-tabs">
+        <input type="radio" id="project-5" name="project-tabs">
+        <input type="radio" id="project-6" name="project-tabs">
+        <input type="radio" id="project-7" name="project-tabs">
+        <input type="radio" id="project-8" name="project-tabs">
+        <input type="radio" id="project-9" name="project-tabs">
+
+        <div class="project-tabs__tabs">
+          <label for="project-1" class="project-tabs__label">Calculator</label>
+          <label for="project-2" class="project-tabs__label">Accordion</label>
+          <label for="project-3" class="project-tabs__label">Tab Component</label>
+          <label for="project-4" class="project-tabs__label">Image Gallery</label>
+          <label for="project-5" class="project-tabs__label">Forms</label>
+          <label for="project-6" class="project-tabs__label">Shopping Cart</label>
+          <label for="project-7" class="project-tabs__label">Business Card</label>
+          <label for="project-8" class="project-tabs__label">Profile Sidebar</label>
+          <label for="project-9" class="project-tabs__label">Buttons</label>
+        </div>
+        <div class="project-tabs__display-area">
+          <label for="project-1-acc" class="project-accordion__label">Calculator <i class="fa fa-chevron-down direction-chev" aria-hidden="true"></i></label>
+          <!-- wrap for project accordion -->
+          <div class="project-accordion__wrapper">
+            <!-- project container -->
+            <div class="project-tabs__content">
+              <h1>Calculator</h1>
+              <!-- project carousel -->
+              <div class="project-carousel__container">
+                <input type="radio" name="calculator" id="p1-s1">
+                <input type="radio" name="calculator" id="p1-s2">
+                <input type="radio" name="calculator" id="p1-s3">
+                <input type="radio" name="calculator" id="p1-s4" checked>
+                <div class="project-carousel__bullet-nav">
+                  <label for="p1-s1"></label>
+                  <label for="p1-s2"></label>
+                  <label for="p1-s3"></label>
+                  <label for="p1-s4"></label>
+                </div>
+                <div class="project-carousel__display-area">
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p1-s4"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/calculator_sml_vert.gif">
+                      <source media="(min-width: 501px)" srcset="img/project_images/calculator.gif">
+                      <img src="img/project_images/calculator.gif" alt="calculator image">
+                    </picture>
+                    <label class="slide-nav__next" for="p1-s2"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p1-s1"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/calc_inspiration_sml_vert.jpg">
+                      <source media="(min-width: 501px)" srcset="img/project_images/calc_inspiration.png">
+                      <img src="img/project_images/calc_inspiration.png" alt="calculator side by side image">
+                    </picture>
+                    <label class="slide-nav__next" for="p1-s3"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p1-s2"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/calc_close-up_sml_vert.gif">
+                      <source media="(min-width: 501px)" srcset="img/project_images/calc_close-up.gif">
+                      <img src="img/project_images/calc_close-up.gif" alt="close up of calculator button states">
+                    </picture>
+                    <label class="slide-nav__next" for="p1-s4"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p1-s3"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <div class="project-embed">
+                      <!-- begin calculator embed code -->
+                      <div id="calc-wrap">
+                        <div id="display-bg">
+                          <div id="display"><span id="cursor">_</span></div>
+                        </div>
+                        <div id="calc-logo">
+                          Skeuomorph 5000
+                        </div>
+                        <div id="keyboard-wrap">
+                          <div class="key orange-key" id="clear">
+                            <p>AC</p>
+                          </div>
+                          <div class="key orange-key" id="del">
+                            <p>C</p>
+                          </div>
+                          <div class="clear-float"></div>
+                          <div class="key" id="7">
+                            <p>7</p>
+                          </div>
+                          <div class="key" id="8">
+                            <p>8</p>
+                          </div>
+                          <div class="key" id="9">
+                            <p>9</p>
+                          </div>
+                          <div class="key color-invert" id="divide">
+                            <p>&divide;</p>
+                          </div>
+                          <div class="key" id="4">
+                            <p>4</p>
+                          </div>
+                          <div class="key" id="5">
+                            <p>5</p>
+                          </div>
+                          <div class="key" id="6">
+                            <p>6</p>
+                          </div>
+                          <div class="key color-invert" id="multiply">
+                            <p>&times;</p>
+                          </div>
+                          <div class="key" id="1">
+                            <p>1</p>
+                          </div>
+                          <div class="key" id="2">
+                            <p>2</p>
+                          </div>
+                          <div class="key" id="3">
+                            <p>3</p>
+                          </div>
+                          <div class="key red-key" id="subtract">
+                            <p>&minus;</p>
+                          </div>
+                          <div class="key" id="0">
+                            <p>0</p>
+                          </div>
+                          <div class="key" id="decimal">
+                            <p>.</p>
+                          </div>
+                          <div class="key green-key" id="equals">
+                            <p>=</p>
+                          </div>
+                          <div class="key blue-key" id="addition">
+                            <p>+</p>
+                          </div>
+                          <div class="clear-float"></div>
+                        </div>
+                      </div>
+                      <!-- end calculator embed code -->
+                    </div>
+                    <label class="slide-nav__next" for="p1-s1"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                </div>
+              </div>
+              <!-- project description and links -->
+              <h3>Technologies: HTML5, CSS3, and Vanilla JavaScript</h3>
+              <p>Inspired by a retro 70's calculator image I found online. This calculator is built with HTML and CSS and uses JavaScript for the functionality</p>
+              <p><a href="https://sbchittenden.github.io/MD-calculator/" class="demo-link" target="_blank">View Demo <i class="fa fa-external-link" aria-hidden="true"></i></a><a href="https://github.com/sbchittenden/MD-calculator" class="source-link" target="_blank">View source on GitHub <i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+          </div>
+          <!-- end project accordion wrap -->
+          <label for="project-2-acc" class="project-accordion__label">Accordion <i class="fa fa-chevron-down direction-chev" aria-hidden="true"></i></label>
+          <!-- wrap for project accordion -->
+          <div class="project-accordion__wrapper">
+            <!-- project container -->
+            <div class="project-tabs__content">
+              <h1>Accordion</h1>
+              <!-- project carousel -->
+              <div class="project-carousel__container">
+                <input type="radio" name="accordion" id="p2-s1">
+                <input type="radio" name="accordion" id="p2-s2">
+                <input type="radio" name="accordion" id="p2-s3">
+                <input type="radio" name="accordion" id="p2-s4" checked>
+                <div class="project-carousel__bullet-nav">
+                  <label for="p2-s1"></label>
+                  <label for="p2-s2"></label>
+                  <label for="p2-s3"></label>
+                  <label for="p2-s4"></label>
+                </div>
+                <div class="project-carousel__display-area">
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p2-s4"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/accordion_static_sml_vert.gif">
+                      <source media="(min-width: 501px) and (max-width: 812px)" srcset="img/project_images/accordion_static_medium.gif">
+                      <img src="img/project_images/accordion_static.gif" alt="accordion image">
+                    </picture>
+                    <label class="slide-nav__next" for="p2-s2"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p2-s1"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/accordion_sml_vert.gif">
+                      <source media="(min-width: 501px)" srcset="img/project_images/accordion.gif">
+                      <img src="img/project_images/accordion.gif" alt="accordion usage gif">
+                    </picture>
+                    <label class="slide-nav__next" for="p2-s3"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p2-s2"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/accordion_resize_sml_vert.gif">
+                      <source media="(min-width: 501px)" srcset="img/project_images/accordion_resize.gif">
+                      <img src="img/project_images/accordion_resize.gif" alt="accordion resizing">
+                    </picture>
+                    <label class="slide-nav__next" for="p2-s4"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p2-s3"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <div class="project-embed">
+                      <!-- begin accordion embed code -->
+                      <div class="accordion">
+                        <ul>
+                          <li>
+                            <input type="radio" name="accordion-embed" id="accordion-section-1" checked>
+                            <label for="accordion-section-1">Hamlet <i class="fa fa-chevron-down direction-chev" aria-hidden="true"></i></label>
+                            <div class="accordion-section-content">
+                              <p>"This above all: to thine own self be true". - (Act I, Scene III).</p>
+                              <p>"Though this be madness, yet there is method in 't.". - (Act II, Scene II).</p>
+                              <p>"Doubt that the sun doth move, doubt truth to be a liar, but never doubt I love". - (Act II, Scene II).</p>
+                            </div>
+                          </li>
+                          <li>
+                            <input type="radio" name="accordion-embed" id="accordion-section-2">
+                            <label for="accordion-section-2">Julius Caesar <i class="fa fa-chevron-down direction-chev" aria-hidden="true"></i></label>
+                            <div class="accordion-section-content">
+                              <p>"Cowards die many times before their deaths; The valiant never taste of death but once. Of all the wonders that I yet have heard, it seems to me most strange that men should fear; Seeing that death, a necessary end, will come when it will come". - (Act II, Scene II).</p>
+                            </div>
+                          </li>
+                          <li>
+                            <input type="radio" name="accordion-embed" id="accordion-section-3">
+                            <label for="accordion-section-3">A Midsummer Night's Dream <i class="fa fa-chevron-down direction-chev" aria-hidden="true"></i></label>
+                            <div class="accordion-section-content">
+                              <p>"The course of true love never did run smooth". - (Act I, Scene I).</p>
+                              <p>"Love looks not with the eyes, but with the mind, and therefore is winged Cupid painted blind". - (Act I, Scene I).</p>
+                            </div>
+                          </li>
+                          <li>
+                            <input type="radio" name="accordion-embed" id="accordion-section-4">
+                            <label for="accordion-section-4">As You Like It <i class="fa fa-chevron-down direction-chev" aria-hidden="true"></i></label>
+                            <div class="accordion-section-content">
+                              <p>"All the world 's a stage, and all the men and women merely players. They have their exits and their entrances; And one man in his time plays many parts" - (Act II, Scene VII).</p>
+                              <p>"The fool doth think he is wise, but the wise man knows himself to be a fool". - (Act V, Scene I).</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- end accordion embed code -->
+                    </div>
+                    <label class="slide-nav__next" for="p2-s1"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                </div>
+              </div>
+              <!-- project description and links -->
+              <h3>Technologies: HTML5 and CSS3</h3>
+              <p>A pure HTML and CSS accordion component. Responsive and reusable.</p>
+              <p><a href="https://sbchittenden.github.io/MD-Mastering-CSS-projects/accordion/" class="demo-link" target="_blank">View Demo <i class="fa fa-external-link" aria-hidden="true"></i></a><a href="https://github.com/sbchittenden/MD-Mastering-CSS-projects/tree/master/accordion" class="source-link" target="_blank">View source on GitHub <i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+          </div>
+          <!-- end project accordion wrap -->
+          <label for="project-3-acc" class="project-accordion__label">Tab Component <i class="fa fa-chevron-down direction-chev" aria-hidden="true"></i></label>
+          <!-- wrap for project accordion -->
+          <div class="project-accordion__wrapper">
+            <!-- project container -->
+            <div class="project-tabs__content">
+              <h1>Tab Component</h1>
+              <!-- project carousel -->
+              <div class="project-carousel__container">
+                <input type="radio" name="tab-component" id="p3-s1">
+                <input type="radio" name="tab-component" id="p3-s2">
+                <input type="radio" name="tab-component" id="p3-s3">
+                <input type="radio" name="tab-component" id="p3-s4" checked>
+                <div class="project-carousel__bullet-nav">
+                  <label for="p3-s1"></label>
+                  <label for="p3-s2"></label>
+                  <label for="p3-s3"></label>
+                  <label for="p3-s4"></label>
+                </div>
+                <div class="project-carousel__display-area">
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p3-s4"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/tabs_static_sml_vert.gif">
+                      <source media="(min-width: 501px)" srcset="img/project_images/tabs_static.gif">
+                      <img src="img/project_images/tabs_static.gif" alt="tab component">
+                    </picture>
+                    <label class="slide-nav__next" for="p3-s2"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p3-s1"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/tab_component_sml_vert.gif">
+                      <source media="(min-width: 501px)" srcset="img/project_images/tab_component.gif">
+                      <img src="img/project_images/tab_component.gif" alt="tab component">
+                    </picture>
+                    <label class="slide-nav__next" for="p3-s3"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p3-s2"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/tabs_static_sml_vert.gif">
+                      <source media="(min-width: 501px)" srcset="img/project_images/tabs_static.gif">
+                      <img src="img/project_images/tabs_static.gif" alt="tab component">
+                    </picture>
+                    <label class="slide-nav__next" for="p3-s4"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p3-s3"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <div class="project-embed">
+                      <!-- begin tab component embed -->
+                      <div class="tab-component">
+                        <input type="radio" id="home-decor" name="tab-input" checked>
+                        <input type="radio" id="furniture" name="tab-input">
+                        <input type="radio" id="kitchen" name="tab-input">
+                        <input type="radio" id="clearance" name="tab-input">
+                        <div class="tab-component__tabs">
+                          <label for="home-decor" class="tab-label">Home Decor</label>
+                          <label for="furniture" class="tab-label">Furniture</label>
+                          <label for="kitchen" class="tab-label">Kitchen</label>
+                          <label for="clearance" class="tab-label">Clearance</label>
+                        </div>
+                        <div class="tab-component__content">
+                          <div class="tab-content">
+                            <h1>Home Decor</h1>
+                            <p>Browse through our list of Home Decor items.</p>
+                          </div>
+                          <div class="tab-content">
+                            <h1>Furniture</h1>
+                            <p>Flash Sale on Living Room and Bedroom Furniture</p>
+                          </div>
+                          <div class="tab-content">
+                            <h1>Kitchen</h1>
+                            <p>Bring the best out of the master chef in you!</p>
+                          </div>
+                          <div class="tab-content">
+                            <h1>Clearance</h1>
+                            <p>Red hot deals at affordable prices. Check out our clearance section for more details.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end tab component embed -->
+                    </div>
+                    <label class="slide-nav__next" for="p3-s1"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                </div>
+              </div>
+              <!-- project description and links -->
+              <h3>Technologies: HTML5 and CSS3</h3>
+              <p>A pure HTML and CSS tab component.</p>
+              <p><a href="https://sbchittenden.github.io/MD-Mastering-CSS-projects/tab-component/" class="demo-link" target="_blank">View Demo <i class="fa fa-external-link" aria-hidden="true"></i></a><a href="https://github.com/sbchittenden/MD-Mastering-CSS-projects/tree/master/tab-component" class="source-link" target="_blank">View source on GitHub <i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+          </div>
+          <!-- end project accordion wrap -->
+          <label for="project-4-acc" class="project-accordion__label">Image Gallery <i class="fa fa-chevron-down direction-chev" aria-hidden="true"></i></label>
+          <!-- wrap for project accordion -->
+          <div class="project-accordion__wrapper">
+            <!-- project container -->
+            <div class="project-tabs__content">
+              <h1>Image Gallery</h1>
+              <!-- project carousel -->
+              <div class="project-carousel__container">
+                <input type="radio" name="image-gallery" id="p4-s1">
+                <input type="radio" name="image-gallery" id="p4-s2">
+                <input type="radio" name="image-gallery" id="p4-s3">
+                <input type="radio" name="image-gallery" id="p4-s4" checked>
+                <div class="project-carousel__bullet-nav">
+                  <label for="p4-s1"></label>
+                  <label for="p4-s2"></label>
+                  <label for="p4-s3"></label>
+                  <label for="p4-s4"></label>
+                </div>
+                <div class="project-carousel__display-area">
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p4-s4"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/image_gallery_sml_vert.jpg">
+                      <source media="(min-width: 501px)" srcset="img/project_images/image_gallery.gif">
+                      <img src="img/project_images/image_gallery.gif" alt="image gallery demo gif">
+                    </picture>
+                    <label class="slide-nav__next" for="p4-s2"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p4-s1"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/thumb_on_hover_sml_vert.gif">
+                      <source media="(min-width: 501px)" srcset="img/project_images/thumb_on_hover.gif">
+                      <img src="img/project_images/thumb_on_hover.gif" alt="">
+                    </picture>
+                    <label class="slide-nav__next" for="p4-s3"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p4-s2"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/image_gallery_resize_sml_vert.gif">
+                      <source media="(min-width: 501px)" srcset="img/project_images/image_gallery_resize.gif">
+                      <img src="img/project_images/image_gallery_resize.gif" alt="close up of image gallery">
+                    </picture>
+                    <label class="slide-nav__next" for="p4-s4"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p4-s3"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <div class="project-embed">
+                      <!-- image gallery embed -->
+                      <div class="image_gallery">
+                        <div class="thumbs">
+                          <label for="img-1"><img src="https://unsplash.it/500/?image=111" alt=""></label>
+                          <label for="img-2"><img src="https://unsplash.it/500/?image=1072" alt=""></label>
+                          <label for="img-3"><img src="https://unsplash.it/500/?image=1070" alt=""></label>
+                          <label for="img-4"><img src="https://unsplash.it/500/?image=655" alt=""></label>
+                          <label for="img-5"><img src="https://unsplash.it/500/?image=1071" alt=""></label>
+                        </div>
+                        <div class="full_sized_images">
+                          <input type="radio" name="thumbs" id="img-1" checked>
+                          <img src="https://unsplash.it/500/?image=111" alt="">
+                          <input type="radio" name="thumbs" id="img-2">
+                          <img src="https://unsplash.it/500/?image=1072" alt="">
+                          <input type="radio" name="thumbs" id="img-3">
+                          <img src="https://unsplash.it/500/?image=1070" alt="">
+                          <input type="radio" name="thumbs" id="img-4">
+                          <img src="https://unsplash.it/500/?image=655" alt="">
+                          <input type="radio" name="thumbs" id="img-5">
+                          <img src="https://unsplash.it/500/?image=1071" alt="">
+                        </div>
+                      </div>
+                      <!-- end image gallery embed -->
+                    </div>
+                    <label class="slide-nav__next" for="p4-s1"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                </div>
+              </div>
+              <!-- project description and links -->
+              <h3>Technologies: HTML5 and CSS3</h3>
+              <p>An image gallery built using only HTML and CSS. Has some fun hover effects on the thumbnail images and smooth CSS transitions between photos.</p>
+              <p><a href="https://sbchittenden.github.io/MD-Mastering-CSS-projects/image_gallery/" class="demo-link" target="_blank">View Demo <i class="fa fa-external-link" aria-hidden="true"></i></a><a href="https://github.com/sbchittenden/MD-Mastering-CSS-projects/tree/gh-pages/image_gallery" class="source-link" target="_blank">View source on GitHub <i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+          </div>
+          <!-- end project accordion wrap -->
+          <label for="project-5-acc" class="project-accordion__label">Forms <i class="fa fa-chevron-down direction-chev" aria-hidden="true"></i></label>
+          <!-- wrap for project accordion -->
+          <div class="project-accordion__wrapper">
+            <!-- project container -->
+            <div class="project-tabs__content">
+              <h1>Forms</h1>
+              <!-- project carousel -->
+              <div class="project-carousel__container">
+                <input type="radio" name="forms" id="p5-s1">
+                <input type="radio" name="forms" id="p5-s2">
+                <input type="radio" name="forms" id="p5-s3">
+                <input type="radio" name="forms" id="p5-s4" checked>
+                <div class="project-carousel__bullet-nav">
+                  <label for="p5-s1"></label>
+                  <label for="p5-s2"></label>
+                  <label for="p5-s3"></label>
+                  <label for="p5-s4"></label>
+                </div>
+                <div class="project-carousel__display-area">
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p5-s4"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/credit_card_form_sml_vert.png">
+                      <source media="(min-width: 501px)" srcset="img/project_images/credit_card_form.png">
+                      <img src="img/project_images/credit_card_form.png" alt="credit card form image">
+                    </picture>
+                    <label class="slide-nav__next" for="p5-s2"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p5-s1"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/color-builder_sml_vert.png">
+                      <source media="(min-width: 501px)" srcset="img/project_images/color-builder.png">
+                      <img src="img/project_images/color-builder.png" alt="">
+                    </picture>
+                    <label class="slide-nav__next" for="p5-s3"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p5-s2"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <div class="project-embed" id="cc-form">
+                      <!-- credit card form embed -->
+                      <div id="cc-form-wrap">
+                        <form action="" method="post" novalidate id="cc_form">
+                          <div id="input-wrap">
+                            <div id="logo"></div>
+                            <div class="txt-right">
+                              <p>Please enter your payment information below. <span class="icons"><i class="fa fa-cc-visa fa-lg" aria-hidden="true"></i> <i class="fa fa-cc-mastercard fa-lg" aria-hidden="true"></i> <i class="fa fa-cc-amex fa-lg" aria-hidden="true"></i></span></p>
+                            </div>
+                            <div class="input-group">
+                              <label for="full_name">Name on card:</label>
+                              <input type="text" name="full_name" id="full_name">
+                              <span class="error"></span>
+                            </div>
+                            <div class="input-group">
+                              <label for="cc_number">Card Number:</label>
+                              <input type="text" name="cc_number" id="cc_number" inputmode="numeric" maxlength="19">
+                              <span class="error"></span>
+                            </div>
+                            <div class="input-group">
+                              <label for="cvc" id="cvc-label"><i class="fa fa-question-circle-o" aria-hidden="true"></i> <span id="cvc-q">A CVC code is the 3 or 4-digit number on the back of the card. The CVC is typically the last three or four digits printed, not embossed like the card number, on the signature strip on the back of the card.</span> CVC Number: </label>
+                              <input type="text" name="cvc" id="cvc" inputmode="numeric">
+                              <span class="error"></span>
+                            </div>
+                            <div class="input-group">
+                              <label for="expiry">Expiration Date:</label>
+                              <select name="expiry_month" id="expiration_month">
+                                <option value="month" selected>Month</option>
+                                <option value="0">January</option>
+                                <option value="1">February</option>
+                                <option value="2">March</option>
+                                <option value="3">April</option>
+                                <option value="4">May</option>
+                                <option value="5">June</option>
+                                <option value="6">July</option>
+                                <option value="7">August</option>
+                                <option value="8">September</option>
+                                <option value="9">October</option>
+                                <option value="10">November</option>
+                                <option value="11">December</option>
+                              </select>
+                              <select name="expiry_year" id="expiry_year">
+                                <option value="year" selected>Year</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                                <option value="2031">2031</option>
+                              </select>
+                              <span class="error"></span>
+                            </div>
+                            <div id="submit-button">
+                              <button class="button" type="submit">Submit</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <!-- end credit card form embed -->
+                    </div>
+                    <label class="slide-nav__next" for="p5-s4"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p5-s3"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <div class="project-embed">
+                      <!-- begin color build form embed -->
+                      <div id="color-build-form-wrap">
+                        <form action="" method="post" id="color_form">
+                          <div id="pow2"></div>
+                          <div id="pow">
+                            <div>
+                              <h1>POW!</h1>
+                            </div>
+                          </div>
+                          <div id="color-builder">
+                            <h1>COLOR BUILDER!</h1></div>
+                          <div class="input-wrap">
+                            <div class="slider-wrap">
+                              <div>
+                                <label for="red">Red</label>
+                                <input id="red" name="red" type="range" min="0" max="255" step="5">
+                                <div class="range-numbers">
+                                  <div class="fl-lft width-50">0</div>
+                                  <div class="fl-rt width-50 text-right">255</div>
+                                </div>
+                              </div>
+                              <div>
+                                <label for="green">Green</label>
+                                <input id="green" name="green" type="range" min="0" max="255" step="5">
+                                <div class="range-numbers">
+                                  <div class="fl-lft width-50">0</div>
+                                  <div class="fl-rt width-50 text-right">255</div>
+                                </div>
+                              </div>
+                              <div>
+                                <label for="blue">Blue</label>
+                                <input id="blue" name="blue" type="range" min="0" max="255" step="5">
+                                <div class="range-numbers">
+                                  <div class="fl-lft width-50">0</div>
+                                  <div class="fl-rt width-50 text-right">255</div>
+                                </div>
+                              </div>
+                              <div>
+                                <label for="alpha">Alpha</label>
+                                <input id="alpha" name="alpha" type="range" min="0" max="1" step="0.1">
+                                <div class="range-numbers">
+                                  <div class="fl-lft width-50">0</div>
+                                  <div class="fl-rt width-50 text-right">1</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="color-window-wrap">
+                              <textarea name="color-window" id="color-window" rows="12" cols="10"></textarea>
+                            </div>
+                            <div>
+                              <button class="button" type="submit">Get my color!</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <!-- end color build form embed -->
+                    </div>
+                    <label class="slide-nav__next" for="p5-s1"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                </div>
+              </div>
+              <!-- project description and links -->
+              <h3>Technologies: HTML5, CSS3, and Vanilla JavaScript</h3>
+              <p>A few examples of webforms. The structure is HTML and CSS with JavaScript for some basic validation.</p>
+              <p><a href="https://sbchittenden.github.io/MD-Intro-to-CSS-website/forms.html" class="demo-link" target="_blank">View Demo <i class="fa fa-external-link" aria-hidden="true"></i></a><a href="https://github.com/sbchittenden/MD-web-forms" class="source-link" target="_blank">View source on GitHub <i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+          </div>
+          <!-- end project accordion wrap -->
+          <label for="project-6-acc" class="project-accordion__label">Shopping Cart <i class="fa fa-chevron-down direction-chev" aria-hidden="true"></i></label>
+          <!-- wrap for project accordion -->
+          <div class="project-accordion__wrapper">
+            <!-- project container -->
+            <div class="project-tabs__content">
+              <h1>Shopping Cart</h1>
+              <!-- project carousel -->
+              <div class="project-carousel__container">
+                <input type="radio" name="shopping-cart" id="p6-s1" checked>
+                <input type="radio" name="shopping-cart" id="p6-s2">
+                <input type="radio" name="shopping-cart" id="p6-s3">
+                <div class="project-carousel__bullet-nav">
+                  <label for="p6-s1"></label>
+                  <label for="p6-s2"></label>
+                  <label for="p6-s3"></label>
+                </div>
+                <div class="project-carousel__display-area">
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p6-s3"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/shopping_cart_sml_vert.jpg">
+                      <source media="(min-width: 501px)" srcset="img/project_images/shopping_cart_scroll.gif">
+                    <img src="img/project_images/shopping_cart_scroll.gif" alt="shopping cart">
+                    </picture>
+                    <label class="slide-nav__next" for="p6-s2"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p6-s1"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/shopping_cart_static.jpg">
+                      <source media="(min-width: 501px)" srcset="img/project_images/shopping_cart.gif">
+                    <img src="img/project_images/shopping_cart.gif" alt="shopping cart in action">
+                    </picture>
+                    <label class="slide-nav__next" for="p6-s3"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p6-s2"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/shopping_cart_bacon_close.jpg">
+                      <source media="(min-width: 501px)" srcset="img/project_images/shopping_cart.png">
+                    <img src="img/project_images/shopping_cart.png" alt="">
+                    </picture>
+                    <label class="slide-nav__next" for="p6-s1"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                </div>
+              </div>
+              <!-- project description and links -->
+              <h3>Technologies: HTML5, CSS3, and Vanilla JavaScript</h3>
+              <p>A functioning product page and shopping cart. Order up some breakfast to go!</p>
+              <p><a href="https://sbchittenden.github.io/MD-product-page/" class="demo-link" target="_blank">View Demo <i class="fa fa-external-link" aria-hidden="true"></i></a><a href="https://github.com/sbchittenden/MD-product-page" class="source-link" target="_blank">View source on GitHub <i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+          </div>
+          <!-- end project accordion wrap -->
+          <label for="project-7-acc" class="project-accordion__label">Business Card <i class="fa fa-chevron-down direction-chev" aria-hidden="true"></i></label>
+          <!-- wrap for project accordion -->
+          <div class="project-accordion__wrapper">
+            <!-- project container -->
+            <div class="project-tabs__content">
+              <h1>Business Card</h1>
+              <!-- project carousel -->
+              <div class="project-carousel__container">
+                <input type="radio" name="business-card" id="p7-s1" checked>
+                <input type="radio" name="business-card" id="p7-s2">
+                <input type="radio" name="business-card" id="p7-s3">
+                <div class="project-carousel__bullet-nav">
+                  <label for="p7-s1"></label>
+                  <label for="p7-s2"></label>
+                  <label for="p7-s3"></label>
+                </div>
+                <div class="project-carousel__display-area">
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p7-s3"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/business_card_front_sml_vert.png">
+                      <source media="(min-width: 501px)" srcset="img/project_images/business_card_front.png">
+                    <img src="img/project_images/business_card_front.png" alt="3D-flip business card front side">
+                    </picture>
+                    <label class="slide-nav__next" for="p7-s2"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p7-s1"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/business_card_back_sml_vert.png">
+                      <source media="(min-width: 501px)" srcset="img/project_images/business_card_back.png">
+                    <img src="img/project_images/business_card_back.png" alt="3D-flip business card back side">
+                    </picture>
+                    <label class="slide-nav__next" for="p7-s3"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p7-s2"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/business_card_sml_vert.gif">
+                      <source media="(min-width: 501px)" srcset="img/project_images/business_card.gif">
+                    <img src="img/project_images/business_card.gif" alt="3D-flip business card gif">
+                    </picture>
+                    <label class="slide-nav__next" for="p7-s1"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                </div>
+              </div>
+              <!-- project description and links -->
+              <h3>Technologies: HTML5 and CSS3</h3>
+              <p>3d-flip business card built with only HTML and CSS. A great introduction to 3d transformations in CSS. Working demo is in the <a href="#contact" class="underline">contact</a> section of this site!</p>
+              <p><a href="https://sbchittenden.github.io/MD-Mastering-CSS-projects/business_card/" class="demo-link" target="_blank">View Demo <i class="fa fa-external-link" aria-hidden="true"></i></a><a href="https://github.com/sbchittenden/MD-Mastering-CSS-projects/tree/master/business_card" class="source-link" target="_blank">View source on GitHub <i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+          </div>
+          <!-- end project accordion wrap -->
+          <label for="project-8-acc" class="project-accordion__label">Profile Sidebar <i class="fa fa-chevron-down direction-chev" aria-hidden="true"></i></label>
+          <!-- wrap for project accordion -->
+          <div class="project-accordion__wrapper">
+            <!-- project container -->
+            <div class="project-tabs__content">
+              <h1>Profile Sidebar</h1>
+              <!-- project carousel -->
+              <div class="project-carousel__container">
+                <input type="radio" name="profile" id="p8-s1">
+                <input type="radio" name="profile" id="p8-s2">
+                <input type="radio" name="profile" id="p8-s3" checked>
+                <div class="project-carousel__bullet-nav">
+                  <label for="p8-s1"></label>
+                  <label for="p8-s2"></label>
+                  <label for="p8-s3"></label>
+                </div>
+                <div class="project-carousel__display-area">
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p8-s3"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/profile_card_sml_vert.png">
+                      <source media="(min-width: 501px)" srcset="img/project_images/profile_card.jpg">
+                      <img src="img/project_images/profile_card.jpg" alt="profile card">
+                    </picture>
+                    <label class="slide-nav__next" for="p8-s2"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p8-s1"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/profile_card_sml_vert.png">
+                      <source media="(min-width: 501px)" srcset="img/project_images/profile_card.jpg">
+                      <img src="img/project_images/profile_card.jpg" alt="profile card">
+                    </picture>
+                    <label class="slide-nav__next" for="p8-s3"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p8-s2"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <div class="project-embed">
+                      <!-- begin profile card embed -->
+                      <div id="md-profile-card">
+                        <div class="card-header-img"></div>
+                        <div class="info-bckgrnd"></div>
+                        <div class="wedge"></div>
+                        <div class="pic">
+                          <img src="img/profile_card/headshot.jpg" alt="" class="profile-pic" />
+                        </div>
+                        <div class="name">
+                          <h1><span class="light">Sam</span><br> Chittenden</h1>
+                        </div>
+                        <div class="bio">
+                          <p>I am a designer and developer living in Colorado, USA. I play the drums, rock climb, and was a professional ballet dancer for 15 years.</p>
+                        </div>
+                        <div class="return">
+                          <h5 class="bio-link"><a href="#full_profile">Back to full profile -></a></h5>
+                        </div>
+                      </div>
+                      <!-- end profile card embed -->
+                    </div>
+                    <label class="slide-nav__next" for="p8-s1"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                </div>
+              </div>
+              <!-- project description and links -->
+              <h3>Technologies: HTML5 and CSS3</h3>
+              <p>A sidebar component built to be used on a profile page at learn.moderndeveloper.</p>
+              <p><a href="https://sbchittenden.github.io/MD-profile-card/" class="demo-link" target="_blank">View Demo <i class="fa fa-external-link" aria-hidden="true"></i></a><a href="https://github.com/sbchittenden/MD-profile-card" class="source-link" target="_blank">View source on GitHub <i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+          </div>
+          <!-- end project accordion wrap -->
+          <label for="project-9-acc" class="project-accordion__label">Buttons <i class="fa fa-chevron-down direction-chev" aria-hidden="true"></i></label>
+          <!-- wrap for project accordion -->
+          <div class="project-accordion__wrapper">
+            <!-- project container -->
+            <div class="project-tabs__content">
+              <h1>Buttons</h1>
+              <!-- project carousel -->
+              <div class="project-carousel__container">
+                <input type="radio" name="buttons" id="p9-s1">
+                <input type="radio" name="buttons" id="p9-s2" checked>
+                <input type="radio" name="buttons" id="p9-s3">
+                <div class="project-carousel__bullet-nav">
+                  <label for="p9-s1"></label>
+                  <label for="p9-s2"></label>
+                  <label for="p9-s3"></label>
+                </div>
+                <div class="project-carousel__display-area">
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p9-s3"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/buttons_sml_vert.gif">
+                      <source media="(min-width: 501px)" srcset="img/project_images/buttons.gif">
+                    <img src="img/project_images/buttons.gif" alt="web buttons">
+                    </picture>
+                    <label class="slide-nav__next" for="p9-s2"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p9-s1"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <div class="project-embed">
+                      <!-- begin button embed -->
+                      <div id="basic-buttons">
+                        <h3>A Basic Button</h3>
+                        <div class="button">Buy Now</div>
+                        <h3>A Button Element with the Button Class</h3>
+                        <button class="button">Send Mail</button>
+                        <h3>An Anchor with a Button Class</h3>
+                        <a href="#basic-buttons" class="button">Search</a>
+                        <h3>Buttons of different sizes</h3>
+                        <div class="button button-sm">A Small Button</div>
+                        <div class="button button-md">A Medium Button</div>
+                        <div class="button button-lg">A Large Button</div>
+                      </div>
+                      <!-- end button embed -->
+                    </div>
+                    <label class="slide-nav__next" for="p9-s3"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                  <figure class="project-carousel__slide">
+                    <label class="slide-nav__previous" for="p9-s2"><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i></label>
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/project_images/dark_buttons_sml_vert.gif">
+                      <source media="(min-width: 501px)" srcset="img/project_images/dark_buttons.gif">
+                    <img src="img/project_images/dark_buttons.gif" alt="dark web buttons">
+                    </picture>
+                    <label class="slide-nav__next" for="p9-s1"><i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i></label>
+                  </figure>
+                </div>
+              </div>
+              <!-- project description and links -->
+              <h3>Technologies: HTML5 and CSS3</h3>
+              <p>A sampling of a few different button components built using HTML and CSS. The demo and code for the dark buttons in the last slide <a href="http://codepen.io/sbchittenden/full/PzXBKx/" class="underline" target="_blank">can be found over on CodePen.</a></p>
+              <p><a href="http://sbchittenden.github.io/sbc-web-components/components/buttons/" class="demo-link" target="_blank">View Demo <i class="fa fa-external-link" aria-hidden="true"></i></a><a href="https://github.com/sbchittenden/sbc-web-components/tree/master/components/buttons" class="source-link" target="_blank">View source on GitHub <i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+            </div>
+          </div>
+          <!-- end project accordion wrap -->
+        </div>
+      </div>
+      <!-- end project tabs container-->
+    </div>
+  </section>
+  <section class="section" id="skills">
+    <div class="section__content">
+      <h1>skills</h1>
+      <p>A visual representation of some of the skills and technologies I have learned thus far. Hovering over each graph's bar will provide additional information. </p>
+      <!-- circle graphs -->
+      <div class="circle-graph__container">
+        <!-- 85% frontend -->
+        <!-- <div class="circle-graph">
+          <div class="circle-background"></div>
+          <div class="circle-full"></div>
+          <div class="circle-full-right"></div>
+          <div class="circle-cover percent-85"></div>
+          <span class="circle-graph__label">85% Frontend</span>
+        </div> -->
+        <div class="circle-graph">
+          <div class="circle-graph__background"></div>
+          <div class="circle-graph__q1"></div>
+          <div class="circle-graph__q2"></div>
+          <div class="circle-graph__q3"></div>
+          <div class="circle-graph__85"></div>
+          <div class="circle-graph__knockout"></div>
+          <span class="circle-graph__label">85% Frontend</span>
+        </div>
+        <!-- 15% backend -->
+        <div class="circle-graph">
+          <div class="circle-graph__background circle-graph__opposite"></div>
+          <div class="circle-graph__15 circle-graph__unfill"></div>
+          <div class="circle-graph__q2 circle-graph__unfill"></div>
+          <div class="circle-graph__q3 circle-graph__unfill"></div>
+          <div class="circle-graph__q4 circle-graph__unfill"></div>
+          <div class="circle-graph__knockout"></div>
+          <span class="circle-graph__label">15% Backend</span>
+        </div>
+      </div>
+      <!-- bar graphs -->
+      <div class="skill-graphs__container">
+        <!-- Frontend skills graph -->
+        <div class="skills-graph">
+          <div class="skills-graphs__graph-label">
+            <h2>Frontend</h2></div>
+          <ul class="y-axis">
+            <li>Expert</li>
+            <li>Proficient</li>
+            <li>Competent</li>
+            <li>Learning</li>
+          </ul>
+          <ul class="x-axis">
+            <li>
+              <div class="bar-item y-85"></div>
+              <span class="title">HTML</span>
+              <span class="skills-graphs__tool-tip">Very comfortable</span>
+            </li>
+            <li>
+              <div class="bar-item y-85"></div>
+              <span class="title">CSS</span>
+              <span class="skills-graphs__tool-tip">Very comfortable</span>
+            </li>
+            <li>
+              <div class="bar-item y-45"></div>
+              <span class="title">JavaScript</span>
+              <span class="skills-graphs__tool-tip">Still learning.</span>
+            </li>
+            <li>
+              <div class="bar-item y-25"></div>
+              <span class="title">jQuery</span>
+              <span class="skills-graphs__tool-tip">Still learning.</span>
+            </li>
+            <li>
+              <div class="bar-item y-15"></div>
+              <span class="title">React</span>
+              <span class="skills-graphs__tool-tip">Just starting.</span>
+            </li>
+          </ul>
+        </div>
+        <!-- Backend skills graph -->
+        <div class="skills-graph">
+          <div class="skills-graphs__graph-label">
+            <h2>Backend</h2></div>
+          <ul class="y-axis">
+            <li>Expert</li>
+            <li>Proficient</li>
+            <li>Competent</li>
+            <li>Learning</li>
+          </ul>
+          <ul class="x-axis">
+            <li>
+              <div class="bar-item y-25"></div>
+              <span class="title">Node.js</span>
+              <span class="skills-graphs__tool-tip">Just starting.</span>
+            </li>
+            <li>
+              <div class="bar-item y-15"></div>
+              <span class="title">Python</span>
+              <span class="skills-graphs__tool-tip">Just starting.</span>
+            </li>
+            <li>
+              <div class="bar-item y-15"></div>
+              <span class="title">MongoDB</span>
+              <span class="skills-graphs__tool-tip">Just starting.</span>
+            </li>
+            <li>
+              <div class="bar-item y-15"></div>
+              <span class="title">Ruby</span>
+              <span class="skills-graphs__tool-tip">Just starting.</span>
+            </li>
+            <li>
+              <div class="bar-item y-25"></div>
+              <span class="title">MySQL</span>
+              <span class="skills-graphs__tool-tip">Just starting.</span>
+            </li>
+          </ul>
+        </div>
+        <!-- Other skills graph -->
+        <div class="skills-graph">
+          <div class="skills-graphs__graph-label">
+            <h2>Other</h2></div>
+          <ul class="y-axis">
+            <li>Expert</li>
+            <li>Proficient</li>
+            <li>Competent</li>
+            <li>Learning</li>
+          </ul>
+          <ul class="x-axis">
+            <li>
+              <div class="bar-item y-75"></div>
+              <span class="title">Written&nbsp;Communication</span>
+              <span class="skills-graphs__tool-tip">Me write good.</span>
+            </li>
+            <li>
+              <div class="bar-item y-85"></div>
+              <span class="title">Problem&nbsp;Solving</span>
+              <span class="skills-graphs__tool-tip">Bring it on!</span>
+            </li>
+            <li>
+              <div class="bar-item y-45"></div>
+              <span class="title">Project&nbsp;Management</span>
+              <span class="skills-graphs__tool-tip">Getting there.</span>
+            </li>
+            <li>
+              <div class="bar-item y-85"></div>
+              <span class="title">Research</span>
+              <span class="skills-graphs__tool-tip">Bring it on!</span>
+            </li>
+            <li>
+              <div class="bar-item y-75"></div>
+              <span class="title">Public&nbsp;Speaking</span>
+              <span class="skills-graphs__tool-tip">Seasoned performer.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="articles">
+    <div class="section__content">
+      <h1>articles</h1>
+      <p>Here we have an archive of articles I have written that have been published over on <a href="https://encyclopedia.moderndeveloper.com/" class="underline" target="_blank">Encyclopedia.MD</a>, one of Modern Developer's resource sites.</p>
+      <ul class="article-list">
+        <li><a href="https://encyclopedia.moderndeveloper.com/frontend/html/preserving-typed-formatting-in-html-pages/" class="underline" target="_blank">Preserving Typed Formatting in HTML Pages</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="section" id="contact">
+    <div class="section__content">
+      <h1>contact</h1>
+      <p>Get in touch with me! There are a few avenues for this on the business card below. Feel free to email me, or connect through another one of the websites linked below. Check out that card too, it flips!</p>
+      <!-- flip business card -->
+      <div class="business-card__container">
+        <input type="checkbox" name="card-flip" id="card-flip">
+        <div class="card-container">
+          <label for="card-flip"></label>
+          <div class="card">
+            <div class="card-front">
+              <i class="fa fa-lg fa-reply" aria-hidden="true"></i>
+              <h1>Sam Chittenden</h1>
+              <h3 class="subheader">Aspiring Full-Stack Developer</h3>
+              <p>Hi! My name is Sam. Let's work on something together. It'll be great! You can get ahold of me through any of the below channels.</p>
+              <p>
+                <a class="underline" href="mailto:sbchittenden@gmail.com">sbchittenden@gmail.com</a>
+                <!-- <a href="#">designeo.us</a> -->
+              </p>
+              <div class="encyclopedia-link"><img src="img/business_card/enc1.png" alt="" /><span>Sam Chittenden</span>
+                <br> on <a href="https://encyclopedia.moderndeveloper.com/" target="_blank">Encyclopedia.MD</a></div>
+              <ul class="site-links">
+                <li>
+                  <a href="https://twitter.com/designeous" target="_blank"><img src="img/business_card/twitter.png" alt="" /></a>
+                </li>
+                <li>
+                  <a href="https://github.com/sbchittenden" target="_blank"><img src="img/business_card/github1.png" alt="github logo" /></a>
+                </li>
+                <!-- <li>
+                  <a href="#"><img src="img/business_card/facebook.png" alt="" /></a>
+                </li> -->
+                <li>
+                  <a href="www.linkedin.com/in/sam-chittenden
+" target="_blank"><img src="img/business_card/linkedin.png" alt="" /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-back">
+              <i class="fa fa-lg fa-reply" aria-hidden="true"></i>
+              <span class="card-back__name">Sam Chittenden</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <span>&copy; 2016 - Sam Chittenden</span>
+  </footer>
+  <script src="js/calculator.js" type="text/javascript"></script>
+  <script src="js/credit.js" type="text/javascript"></script>
+  <script src="js/color.js" type="text/javascript"></script>
+</body>
+
+</html>

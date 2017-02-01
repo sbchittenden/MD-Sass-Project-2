@@ -1,0 +1,181 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.card-container {
+  width: 34.375em;
+  height: 20.438em;
+  position: relative;
+  -webkit-perspective: 500px;
+  perspective: 500px;
+  margin: 5% auto;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-weight: 300;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-backface-visibility: hidden;
+}
+
+.card h1 {
+  font-weight: 300;
+  font-size: 3em;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  text-shadow: none;
+}
+
+.subheader {
+  font-weight: 300;
+  font-size: 1em;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.card p {
+  margin-bottom: 0.8em;
+  padding: 0;
+  line-height: normal;
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+}
+
+.card-back__name {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  font-weight: 400;
+  position: absolute;
+  width: 8.6em;
+  text-align: center;
+  bottom: 0.4em;
+  right: 1em;
+  border-radius: .2em;
+  margin-bottom: 0.8em;
+  font-family: 'Lato', sans-serif;
+}
+
+label[for="card-flip"] {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+label[for="card-flip"]:hover + .card {
+  -webkit-transform: rotateX(15deg);
+  transform: rotateX(15deg);
+}
+
+#card-flip:checked ~ .card-container label[for="card-flip"]:hover + .card {
+  -webkit-transform: rotateX(165deg);
+  transform: rotateX(165deg);
+}
+
+.card > div[class^="card-"] {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: .25em;
+}
+
+.card-front {
+  width: 100%;
+  height: 100%;
+  padding: 1em 1.3em;
+  background-color: #373B44;
+  background: #373B44 url(../img/business_card/skulls_50.png) repeat;
+}
+
+.card-front > .fa-reply,
+.card-back > .fa-reply {
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  right: 0.75em;
+  top: 0.8em;
+  color: rgba(255, 255, 255, 0.75);
+  -webkit-backface-visibility: hidden;
+}
+
+.card-front p a {
+  text-decoration: none;
+  color: #EF4D75;
+  font-weight: 300;
+  margin-right: 2em;
+}
+
+.encyclopedia-link {
+    width: 50%;
+    position: absolute;
+    bottom: 1.1em;
+    font-family: "Lato";
+    -webkit-backface-visibility: hidden;
+}
+
+.encyclopedia-link a {
+  color: #EF4D75;
+  font-weight: 300;
+}
+
+.encyclopedia-link > span {
+  font-weight: 300;
+}
+
+.encyclopedia-link img {
+  float: left;
+  width: 18%;
+  margin-right: 0.75em;
+}
+
+.site-links {
+  list-style-type: none;
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 1.1em;
+  right: 1em;
+  width: auto;
+  -webkit-backface-visibility: hidden;
+}
+
+.site-links li {
+  display: inline-block;
+}
+
+.site-links li a img {
+  width: 80%;
+}
+
+.card-back {
+  width: 100%;
+  height: 100%;
+  background-color: #dababb;
+  background: url(../img/business_card/sbc2-2.jpg) center / cover no-repeat;
+  text-align: right;
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+#card-flip:checked ~ .card-container label[for="card-flip"] + .card {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}

@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-nav-blue;
+}
+
+.sp1-site-container {
+  display: flex;
+}
+
+.sp1-main-content {
+  height: 100vh;
+  overflow: scroll;
+  flex: 1 1 75%;
+}
+
+#welcome {
+  background-color: $primary-green;
+  & h3 {
+    color: transparentize($font-light, 0.5);
+  }
+}
+
+#what {
+  background-color: $primary-blue;
+  padding: 0;
+  & .sp1-subsection {
+    @include flexContainer(row, flex-start, center);
+    @include media-max(884px) {
+      flex-wrap: wrap;
+      padding: 0;
+    }
+    padding-right: 4em;
+    & .subsection__image-block {
+      @include flexContainer(row, center, center);
+      flex: 1 1 33%;
+      @include media-max(884px) {
+        width: 100%;
+        height: 15em;
+        flex: 1 1 100%;
+      }
+      overflow: hidden;
+      & img {
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    & .subsection__content-block {
+      // width: 100%;
+      flex: 1 1 67%;
+      @include media-max(884px) {
+        width: 100%;
+        flex: 1 1 100%;
+        padding: 0 3em;
+      }
+      padding-left: 4em;
+      & h1 {
+        font-size: 2em;
+      }
+    }
+    &:nth-of-type(2) {
+      background-color: darken($primary-blue, 2%);
+    }
+    &:nth-of-type(3) {
+      background-color: darken($primary-blue, 4%);
+    }
+  }
+}
+
+#do {
+  background-color: $primary-red;
+  justify-content: flex-start;
+  & h1 {
+    font-size: 2em;
+  }
+  padding-bottom: 4em;
+}
+
+.subsection__grid-wrapper {
+  @include flexContainer(row wrap, flex-start, center);
+  margin-top: 2em;
+  border: $transparent-border;
+  border-radius: 5px;
+  background-color: transparentize($font-light, 0.92);
+}
+
+.subsection__grid-item {
+  flex: 1 1 50%;
+  padding: 2em 4em;
+  border-bottom: $transparent-border;
+  &:nth-of-type(odd) {
+    border-right: $transparent-border;
+  }
+  &:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+  & h3 {
+    font-size: 1.25em;
+  }
+}
+
+#contact {
+  background-color: $primary-green;
+  & h1 {
+    font-size: 2em;
+  }
+  align-items: flex-start;
+}
+
+.subsection__contact-details__wrapper {
+  @include flexContainer(row wrap, space-between, flex-start);
+  width: 100%;
+}

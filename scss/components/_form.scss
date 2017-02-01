@@ -1,0 +1,60 @@
+.sp1-contact-form {
+  @include flexContainer(row wrap, space-between, flex-start);
+  flex: 1 1 65%;
+  border-right: $transparent-border;
+  @media screen and (min-width: 676px) and (max-width: 844px) {
+    margin-bottom: 2em;
+  }
+  @include media-max(675px) {
+    flex: 1 1 100%;
+    border-right: none;
+  }
+  @include media-max(526px) {
+    width: 100%;
+  }
+  & label {
+    display: block;
+    color: $font-light;
+    font-size: 1.2em;
+    font-family: $oswald;
+    margin-bottom: 1em;
+  }
+  & input {
+    width: 100%;
+    border: $transparent-border;
+    background-color: transparentize($font-light, 0.92);
+    padding: 1em;
+    outline: none;
+    color: $font-light;
+    border-radius: 3px;
+    transition: all 0.35s ease;
+    &:focus {
+      border: solid 1px $font-light;
+    }
+  }
+  & textarea {
+    border: $transparent-border;
+    background-color: transparentize($font-light, 0.92);
+    width: 100%;
+    padding: 1em;
+    outline: none;
+    color: $font-light;
+    border-radius: 3px;
+    transition: all 0.35s ease;
+    &:focus {
+      border: solid 1px $font-light;
+    }
+  }
+}
+
+.form-group {
+  flex: 1 1 auto;
+  margin-right: 2em;
+  margin-bottom: 1.5em;
+  &:nth-of-type(3) {
+    flex: 1 1 100%;
+  }
+  @include media-max(526px) {
+    margin-right: 0;
+  }
+}
