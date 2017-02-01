@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  &:before {
+    box-sizing: border-box;
+  }
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: $section-color-1;
+  color: $main-font-color;
+}
+
+// anchor link styles
+a {
+  text-decoration: none;
+}
+
+.underline {
+  display: inline-block;
+  position: relative;
+  font-family: $montserrat;
+  color: $highlight;
+  text-decoration: none;
+  &:after {
+    content: "";
+    width: 100%;
+    height: 0.15rem;
+    position: absolute;
+    bottom: -0.15em;
+    left: 0;
+    background-color: $highlight;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+  }
+  &:hover:after {
+    // height: 0.15rem;
+    // position: absolute;
+    // bottom: -0.15em;
+    // left: 0;
+    transform: scaleX(1);
+  }
+}
+
