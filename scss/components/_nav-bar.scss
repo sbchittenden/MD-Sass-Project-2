@@ -142,51 +142,44 @@ input[id^="nav__search-modal"] {
   }
 }
 
-/////// stopped here!!!!!
-
 .nav__search-modal__modal {
-  color: #FFFFFF;
-  background-color: #373B44;
-  border: solid 2px #FFFFFF;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
-  transition: top 500ms;
-  border-radius: 0.3em;
   width: 50%;
-  text-align: center;
   padding: 1em;
-}
-
-@media screen and (max-width: 400px) {
-  .nav__search-modal__modal {
-    width: 80%;
-  }
-  .nav__search-modal__modal h1 {
-    font-size: 1.5em;
-  }
-}
-
-#nav__search-modal__toggle:checked + .nav__search-modal__container > .nav__search-modal__modal {
-  top: 50%;
-  z-index: 3;
+  text-align: center;
+  color: $white;
+  background-color: $section-color-1;
+  border: solid 2px $white;
+  border-radius: 0.3em;
   transition: top 500ms;
+  @at-root #nav__search-modal__toggle:checked + .nav__search-modal__container > & {
+    top: 50%;
+    z-index: 3;
+    transition: top 500ms;
+  }
+  @media screen and (max-width: 400px) {
+    width: 80%;
+    h1 {
+      font-size: 1.5em;
+    }
+  }
 }
 
 .nav__search-modal__toggle-close {
   display: inline-block;
-  border: solid 2px #FFFFFF;
+  border: solid 2px $white;
   padding: 0.5em;
   border-radius: 50%;
   transition: all 0.25s;
-}
-
-.nav__search-modal__toggle-close:hover {
-  cursor: pointer;
-  color: #EF4D75;
-  border: solid 2px #EF4D75;
+  &:hover {
+    cursor: pointer;
+    color: $highlight;
+    border: solid 2px $highlight;
+  }
 }
 
 //----- DEVICE WIDTH MODAL SPANS ------------
@@ -196,6 +189,7 @@ input[id^="nav__search-modal"] {
   font-size: 0.75em;
 }
 
+//===== TO DO: function or mixin to automate these media queries ========//
 @media screen and (max-width: 360px) {
   .range-1 {
     display: block;
@@ -264,18 +258,21 @@ input[type="checkbox"] {
 }
 
 #nav-off-canvas__container {
-  font-family: 'Montserrat';
+  font-family: $montserrat;
   font-weight: 700;
   width: 19em;
   height: calc(100vh - 3em);
   padding: 0;
-  background-color: #40444F;
-  border-right: solid 0.4em #EF4D75;
+  background-color: $section-color-2;
+  border-right: solid 0.4em $highlight;
   position: fixed;
   top: 4.930em;
   left: -19em;
   transition: all 0.5s ease-in-out;
   z-index: 50;
+  &:target {
+    left: 0;
+  }
 }
 
 .nav-off-canvas__main-menu {
@@ -286,7 +283,7 @@ input[type="checkbox"] {
 }
 
 .nav-off-canvas__sub-menu {
-  background-color: #4A4E5A;
+  background-color: $section-color-3;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -294,6 +291,9 @@ input[type="checkbox"] {
   top: 0;
   left: 20em;
   transition: left 0.3s linear;
+  @at-root #submenu__projects:checked ~ & {
+    left: 7.5em;
+  }
 }
 
 .off-canvas__nav-list {
@@ -301,14 +301,28 @@ input[type="checkbox"] {
   padding: 0;
   margin: 0;
   font-size: 1.2em;
+  li {
+    color: $white;
+    margin-left: -8em;
+    &:hover {
+      background-color: $section-color-5;
+    }
+    a {
+      padding: 1em 0.75em;
+      display: block;
+      text-decoration: none;
+      color: $white;
+    }
+  }
+  @at-root #submenu__projects:checked + & li label[for="submenu__projects"] {
+    background-color: $highlight;
+  }
+  @at-root #nav-off-canvas__container:target & > li {
+    margin-left: 0;
+  }
 }
 
-.off-canvas__nav-list li {
-  /*   padding: 1em; */
-  color: #ffffff;
-  margin-left: -8em;
-}
-
+//===== TO DO: function or mixin to automate these selecors ========//
 // off-canvas menu item transitions
 .off-canvas__nav-list .off-canvas__nav-list__main-item:nth-of-type(1) {
   transition: margin-left 0.1s 0.5s ease;
@@ -335,54 +349,43 @@ input[type="checkbox"] {
 }
 
 // end off-canvas menu item transitions
-.off-canvas__nav-list li a {
-  padding: 1em 0.75em;
-  display: block;
-}
-
-.off-canvas__nav-list li:hover {
-  background-color: #5B616F;
-}
-
 .off-canvas-search {
   position: relative;
   margin-top: 0.5em;
-}
-
-li.off-canvas-search:hover {
-  background-color: #40444F;
-}
-
-.off-canvas-search .search {
-  margin: 0 0.5em 0 1em;
-  padding-left: 0.5em;
-  height: 0;
-  opacity: 0;
-  width: 75%;
-  transition: height 0.2s linear, opacity 0.1s linear;
-}
-
-.off-canvas-search > label[for="nav__search-modal__toggle"] {
-  height: 0;
-  opacity: 0;
-  transition: height 0.2s linear, opacity 0.1s linear;
-}
-
-.off-canvas-search .search:focus + label,
-.off-canvas-search .search:valid + label {
-  top: 0em;
-  font-size: 1em;
-  color: #EF4D75;
-}
-
-#off-canvas__search:checked ~ .off-canvas__nav-list .off-canvas-search .search {
-  height: 3em;
-  opacity: 1;
-}
-
-#off-canvas__search:checked ~ .off-canvas__nav-list .off-canvas-search > label[for="nav__search-modal__toggle"] {
-  height: 3em;
-  opacity: 1;
+  &:hover {
+    background-color: $section-color-2;
+  }
+  & .search {
+    margin: 0 0.5em 0 1em;
+    padding-left: 0.5em;
+    height: 0;
+    opacity: 0;
+    width: 75%;
+    transition: height 0.2s linear, opacity 0.1s linear;
+    &:focus + label {
+      top: 0em;
+      font-size: 1em;
+      color: $highlight;
+    }
+    &:valid + label {
+      top: 0em;
+      font-size: 1em;
+      color: $highlight;
+    }
+  }
+  @at-root #off-canvas__search:checked ~ .off-canvas__nav-list & .search {
+    height: 3em;
+    opacity: 1;
+  }
+  & > label[for="nav__search-modal__toggle"] {
+    height: 0;
+    opacity: 0;
+    transition: height 0.2s linear, opacity 0.1s linear;
+  }
+  @at-root #off-canvas__search:checked ~ .off-canvas__nav-list & > label[for="nav__search-modal__toggle"] {
+    height: 3em;
+    opacity: 1;
+  }
 }
 
 label[for="submenu__projects"],
@@ -393,11 +396,6 @@ label[for="off-canvas__search"] {
   margin-left: -4px;
 }
 
-.off-canvas__nav-list a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
 #off-canvas-menu__background {
   width: 100%;
   height: 100%;
@@ -405,33 +403,21 @@ label[for="off-canvas__search"] {
   opacity: 0;
   z-index: -500;
   position: fixed;
-  transition: 0.15s 0.3s opacity linear;
+  transition: all 0.15s 0.3s opacity linear;
+  @at-root #nav-off-canvas__container:target ~ & {
+    width: 100%;
+    height: 100%;
+    background-color: $menu-background;
+    opacity: 0.8;
+    z-index: 30;
+    position: fixed;
+  }
 }
 
-#submenu__projects:checked ~ .nav-off-canvas__sub-menu {
-  left: 7.5em;
-}
+//------------------
+// Stopped HERE continue
+// --------------------
 
-#submenu__projects:checked + .off-canvas__nav-list li label[for="submenu__projects"] {
-  background-color: #EF4D75;
-}
-
-#nav-off-canvas__container:target {
-  left: 0;
-}
-
-#nav-off-canvas__container:target ~ #off-canvas-menu__background {
-  width: 100%;
-  height: 100%;
-  background-color: #141519;
-  opacity: 0.8;
-  z-index: 30;
-  position: fixed;
-}
-
-#nav-off-canvas__container:target .off-canvas__nav-list > li {
-  margin-left: 0;
-}
 
 // ====== main off-canvas hamburger icon =====
 #off-canvas-menu__burger {
