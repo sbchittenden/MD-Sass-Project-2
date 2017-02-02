@@ -1,0 +1,206 @@
+//=========================================//
+//           PROJECT TABS STYLES          //
+//========================================//
+
+input[id^="project"] {
+  display: none;
+}
+
+.project-tabs__container {
+  margin: 1em 0 10% 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.project-tabs__label {
+  display: block;
+  padding: 1em 0.5em 1em 1em;
+  cursor: pointer;
+  margin-left: 0.7em;
+  background-color: $section-color-6;
+  transition: all 0.5s;
+  &:hover {
+    background-color: $section-color-2;
+    margin-left: 0.35em;
+  }
+}
+
+.project-tabs__tabs {
+  flex: 1;
+  @media screen and (max-width: 725px) {
+    display: none;
+  }
+}
+
+.project-tabs__display-area {
+  flex: 4;
+  position: relative;
+  background-color: $section-color-1;
+}
+
+.project-tabs__content {
+  height: 100%;
+  padding: 1.5em 2em 2em 2em;
+  position: absolute;
+  top: 0;
+  background-color: $section-color-1;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  & h1 {
+    font-size: 2.25em;
+    margin: 0 0 0.7em 0;
+  }
+  & h3 {
+    font-size: 1em;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 3.3em 0 1em 0;
+  }
+  & p {
+    padding: 0;
+    margin: 0.75em 0;
+    font-size: 0.85em;
+    &:last-of-type {
+      margin-bottom: 0em;
+    }
+  }
+  @media screen and (max-width: 725px) {
+    padding: 0.75em;
+  }
+}
+
+.project-embed {
+  width: 85%;
+}
+
+%project-tab-link {
+  color: $white;
+  font-family: $montserrat;
+  font-size: 0.8em;
+  transition: all 0.35s;
+  &:hover {
+    color: $highlight;
+  }
+}
+
+.demo-link {
+  @extend %project-tab-link;
+}
+
+.source-link {
+  @extend %project-tab-link;
+  &:before {
+    content: "\f09b";
+    font-family: "FontAwesome";
+    margin: 0 0.3em 0 2em;
+    font-size: 1.5em;
+  }
+}
+
+%selected-project-tabs {
+  background-color: $section-color-1;
+  margin-left: 0em;
+}
+
+@for $i from 1 through 9 {
+  #project-#{$i}:checked ~ .project-tabs__tabs label:nth-of-type(#{$i}) {
+    @extend %selected-project-tabs;
+  }
+}
+
+
+/* tabs to accordion styles */
+
+@media screen and (max-width: 725px) {
+  .project-accordion__wrapper {
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.75s;
+  }
+}
+
+.project-accordion__label {
+  display: none;
+  &:hover {
+    background-color: $section-color-2;
+  }
+  @media screen and (max-width: 725px) {
+    display: block;
+    padding: 1em 0.5em 1em 1em;
+    cursor: pointer;
+    background-color: $section-color-6;
+    transition: all 0.5s;
+  }
+}
+
+.direction-chev {
+  position: absolute;
+  right: 1.5em;
+  transition: transform 1s;
+}
+
+// placeholder and loop for project accordion chevron
+%rotate-accordion-chevron {
+  transform: rotate(-180deg);
+}
+
+@for $i from 1 through 9 {
+  #project-#{$i}-acc:checked ~ .project-tabs__display-area label[for="project-#{$i}-acc"] > i {
+    @extend %rotate-accordion-chevron;
+  }
+}
+
+// placeholder and loop for project accordion selected styles
+%project-accordion-selected {
+  border-bottom: solid 2px $highlight;
+  background-color: $menu-icon-color;
+}
+
+@for $i from 1 through 9 {
+  #project-#{$i}-acc:checked ~ .project-tabs__display-area label[for="project-#{$i}-acc"] {
+    @extend %project-accordion-selected;
+  }
+}
+
+// placeholder and loop for open height of project accordion wrapper
+%project-accordion-selected-wrapper-height {
+  height: 725px;
+}
+
+@for $i from 1 through 9 {
+  #project-#{$i}-acc:checked ~ .project-tabs__display-area label[for="project-#{$i}-acc"] + .project-accordion__wrapper {
+    @extend %project-accordion-selected-wrapper-height;
+  }
+}
+
+//project accordion content display when selected
+%project-accordion-content-selected {
+  z-index: 5;
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.75s ease-in-out;
+}
+
+@for $i from 1 through 9 {
+  #project-#{$i}-acc:checked ~ .project-tabs__display-area label[for="project-#{$i}-acc"] + .project-accordion__wrapper .project-tabs__content {
+    @extend %project-accordion-content-selected;
+  }
+}
+
+//project tab content display when selected
+%project-tab-content-selected {
+  z-index: 5;
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@for $i from 1 through 9 {
+  #project-#{$i}:checked ~ .project-tabs__display-area label[for="project-#{$i}-acc"] + .project-accordion__wrapper .project-tabs__content {
+    @extend %project-tab-content-selected;
+  }
+}

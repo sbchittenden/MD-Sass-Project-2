@@ -1,7 +1,7 @@
 //=====================================//
 //        SECTION CONTENT STYLES      //
 //====================================//
-// LANDING SECTION H1
+
 .greeting {
   font-size: 4em;
   color: $highlight;
@@ -49,10 +49,8 @@
   z-index: 2;
 }
 
-
-/* LIMIT OVERALL WIDTH OF SECTION CONTENTS */
-
 .section__content {
+  // LIMIT OVERALL WIDTH OF SECTION CONTENTS
   max-width: 60em;
   margin-bottom: 10%;
   position: relative;
@@ -68,6 +66,7 @@
     text-shadow: -3px 3px $section-color-1;
     @media screen and (max-width: 400px) {
       margin-top: 25%;
+      text-align: center;
     }
   }
   & p {
@@ -77,14 +76,13 @@
     &:last-of-type {
       margin-bottom: 0em;
     }
+    @media screen and (max-width: 400px) {
+      padding: 0 1.5em 0 1.5em;
+    }
   }
-}
-
-
-/* this should be moved to project tabs section */
-
-.project-tabs__content p:last-of-type {
-  margin-bottom: 0em;
+  @media screen and (max-width: 400px) {
+    width: 100%;
+  }
 }
 
 %headshot {
@@ -140,51 +138,31 @@
 }
 
 .intro-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $montserrat;
   font-size: 1.5em;
   font-weight: 700;
   line-height: 1;
-  color: #EF4D75;
+  color: $highlight;
 }
 
 .article-list {
   list-style-type: none;
   margin: 0;
   padding: 0 0 0 5em;
+  & li {
+    font-size: 1.25em;
+  }
+  @media screen and (max-width: 400px) {
+    padding: 0 1.5em 0 1.5em;
+  }
 }
 
-.article-list li {
-  font-size: 1.25em;
-}
-
-
-/* -----------------------------------------
-       SECTION CONTENT ANIMATION KEYFRAMES
--------------------------------------------*/
-
+// SECTION CONTENT ANIMATION KEYFRAMES
 @keyframes fadeInUp {
   0% {
     transform: translateY(8em);
   }
   100% {
     transform: translateY(0);
-  }
-}
-
-
-/* ------------------------------------------
-        SECTION CONTENT MEDIA QUERIES
---------------------------------------------- */
-
-@media screen and (max-width: 400px) {
-  .section__content {
-    width: 100%;
-  }
-  .section__content h1 {
-    text-align: center;
-  }
-  .section__content p,
-  .article-list {
-    padding: 0 1.5em 0 1.5em;
   }
 }

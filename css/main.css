@@ -970,6 +970,164 @@ label[for="off-canvas__search"] {
   display: block;
 }
 
+input[id^="project"] {
+  display: none;
+}
+
+.project-tabs__container {
+  margin: 1em 0 10% 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.project-tabs__label {
+  display: block;
+  padding: 1em 0.5em 1em 1em;
+  cursor: pointer;
+  margin-left: 0.7em;
+  background-color: #636B7B;
+  transition: all 0.5s;
+}
+.project-tabs__label:hover {
+  background-color: #40444F;
+  margin-left: 0.35em;
+}
+
+.project-tabs__tabs {
+  flex: 1;
+}
+@media screen and (max-width: 725px) {
+  .project-tabs__tabs {
+    display: none;
+  }
+}
+
+.project-tabs__display-area {
+  flex: 4;
+  position: relative;
+  background-color: #373B44;
+}
+
+.project-tabs__content {
+  height: 100%;
+  padding: 1.5em 2em 2em 2em;
+  position: absolute;
+  top: 0;
+  background-color: #373B44;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.project-tabs__content h1 {
+  font-size: 2.25em;
+  margin: 0 0 0.7em 0;
+}
+.project-tabs__content h3 {
+  font-size: 1em;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 3.3em 0 1em 0;
+}
+.project-tabs__content p {
+  padding: 0;
+  margin: 0.75em 0;
+  font-size: 0.85em;
+}
+.project-tabs__content p:last-of-type {
+  margin-bottom: 0em;
+}
+@media screen and (max-width: 725px) {
+  .project-tabs__content {
+    padding: 0.75em;
+  }
+}
+
+.project-embed {
+  width: 85%;
+}
+
+.demo-link, .source-link {
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  transition: all 0.35s;
+}
+.demo-link:hover, .source-link:hover {
+  color: #EF4D75;
+}
+
+.source-link:before {
+  content: "\f09b";
+  font-family: "FontAwesome";
+  margin: 0 0.3em 0 2em;
+  font-size: 1.5em;
+}
+
+#project-1:checked ~ .project-tabs__tabs label:nth-of-type(1), #project-2:checked ~ .project-tabs__tabs label:nth-of-type(2), #project-3:checked ~ .project-tabs__tabs label:nth-of-type(3), #project-4:checked ~ .project-tabs__tabs label:nth-of-type(4), #project-5:checked ~ .project-tabs__tabs label:nth-of-type(5), #project-6:checked ~ .project-tabs__tabs label:nth-of-type(6), #project-7:checked ~ .project-tabs__tabs label:nth-of-type(7), #project-8:checked ~ .project-tabs__tabs label:nth-of-type(8), #project-9:checked ~ .project-tabs__tabs label:nth-of-type(9) {
+  background-color: #373B44;
+  margin-left: 0em;
+}
+
+/* tabs to accordion styles */
+@media screen and (max-width: 725px) {
+  .project-accordion__wrapper {
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.75s;
+  }
+}
+.project-accordion__label {
+  display: none;
+}
+.project-accordion__label:hover {
+  background-color: #40444F;
+}
+@media screen and (max-width: 725px) {
+  .project-accordion__label {
+    display: block;
+    padding: 1em 0.5em 1em 1em;
+    cursor: pointer;
+    background-color: #636B7B;
+    transition: all 0.5s;
+  }
+}
+
+.direction-chev {
+  position: absolute;
+  right: 1.5em;
+  transition: transform 1s;
+}
+
+#project-1-acc:checked ~ .project-tabs__display-area label[for="project-1-acc"] > i, #project-2-acc:checked ~ .project-tabs__display-area label[for="project-2-acc"] > i, #project-3-acc:checked ~ .project-tabs__display-area label[for="project-3-acc"] > i, #project-4-acc:checked ~ .project-tabs__display-area label[for="project-4-acc"] > i, #project-5-acc:checked ~ .project-tabs__display-area label[for="project-5-acc"] > i, #project-6-acc:checked ~ .project-tabs__display-area label[for="project-6-acc"] > i, #project-7-acc:checked ~ .project-tabs__display-area label[for="project-7-acc"] > i, #project-8-acc:checked ~ .project-tabs__display-area label[for="project-8-acc"] > i, #project-9-acc:checked ~ .project-tabs__display-area label[for="project-9-acc"] > i {
+  transform: rotate(-180deg);
+}
+
+#project-1-acc:checked ~ .project-tabs__display-area label[for="project-1-acc"], #project-2-acc:checked ~ .project-tabs__display-area label[for="project-2-acc"], #project-3-acc:checked ~ .project-tabs__display-area label[for="project-3-acc"], #project-4-acc:checked ~ .project-tabs__display-area label[for="project-4-acc"], #project-5-acc:checked ~ .project-tabs__display-area label[for="project-5-acc"], #project-6-acc:checked ~ .project-tabs__display-area label[for="project-6-acc"], #project-7-acc:checked ~ .project-tabs__display-area label[for="project-7-acc"], #project-8-acc:checked ~ .project-tabs__display-area label[for="project-8-acc"], #project-9-acc:checked ~ .project-tabs__display-area label[for="project-9-acc"] {
+  border-bottom: solid 2px #EF4D75;
+  background-color: #8a91a1;
+}
+
+#project-1-acc:checked ~ .project-tabs__display-area label[for="project-1-acc"] + .project-accordion__wrapper, #project-2-acc:checked ~ .project-tabs__display-area label[for="project-2-acc"] + .project-accordion__wrapper, #project-3-acc:checked ~ .project-tabs__display-area label[for="project-3-acc"] + .project-accordion__wrapper, #project-4-acc:checked ~ .project-tabs__display-area label[for="project-4-acc"] + .project-accordion__wrapper, #project-5-acc:checked ~ .project-tabs__display-area label[for="project-5-acc"] + .project-accordion__wrapper, #project-6-acc:checked ~ .project-tabs__display-area label[for="project-6-acc"] + .project-accordion__wrapper, #project-7-acc:checked ~ .project-tabs__display-area label[for="project-7-acc"] + .project-accordion__wrapper, #project-8-acc:checked ~ .project-tabs__display-area label[for="project-8-acc"] + .project-accordion__wrapper, #project-9-acc:checked ~ .project-tabs__display-area label[for="project-9-acc"] + .project-accordion__wrapper {
+  height: 725px;
+}
+
+#project-1-acc:checked ~ .project-tabs__display-area label[for="project-1-acc"] + .project-accordion__wrapper .project-tabs__content, #project-2-acc:checked ~ .project-tabs__display-area label[for="project-2-acc"] + .project-accordion__wrapper .project-tabs__content, #project-3-acc:checked ~ .project-tabs__display-area label[for="project-3-acc"] + .project-accordion__wrapper .project-tabs__content, #project-4-acc:checked ~ .project-tabs__display-area label[for="project-4-acc"] + .project-accordion__wrapper .project-tabs__content, #project-5-acc:checked ~ .project-tabs__display-area label[for="project-5-acc"] + .project-accordion__wrapper .project-tabs__content, #project-6-acc:checked ~ .project-tabs__display-area label[for="project-6-acc"] + .project-accordion__wrapper .project-tabs__content, #project-7-acc:checked ~ .project-tabs__display-area label[for="project-7-acc"] + .project-accordion__wrapper .project-tabs__content, #project-8-acc:checked ~ .project-tabs__display-area label[for="project-8-acc"] + .project-accordion__wrapper .project-tabs__content, #project-9-acc:checked ~ .project-tabs__display-area label[for="project-9-acc"] + .project-accordion__wrapper .project-tabs__content {
+  z-index: 5;
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.75s ease-in-out;
+}
+
+#project-1:checked ~ .project-tabs__display-area label[for="project-1-acc"] + .project-accordion__wrapper .project-tabs__content, #project-2:checked ~ .project-tabs__display-area label[for="project-2-acc"] + .project-accordion__wrapper .project-tabs__content, #project-3:checked ~ .project-tabs__display-area label[for="project-3-acc"] + .project-accordion__wrapper .project-tabs__content, #project-4:checked ~ .project-tabs__display-area label[for="project-4-acc"] + .project-accordion__wrapper .project-tabs__content, #project-5:checked ~ .project-tabs__display-area label[for="project-5-acc"] + .project-accordion__wrapper .project-tabs__content, #project-6:checked ~ .project-tabs__display-area label[for="project-6-acc"] + .project-accordion__wrapper .project-tabs__content, #project-7:checked ~ .project-tabs__display-area label[for="project-7-acc"] + .project-accordion__wrapper .project-tabs__content, #project-8:checked ~ .project-tabs__display-area label[for="project-8-acc"] + .project-accordion__wrapper .project-tabs__content, #project-9:checked ~ .project-tabs__display-area label[for="project-9-acc"] + .project-accordion__wrapper .project-tabs__content {
+  z-index: 5;
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .section {
   min-height: 98vh;
   position: relative;
@@ -1093,7 +1251,6 @@ label[for="off-canvas__search"] {
   z-index: 2;
 }
 
-/* LIMIT OVERALL WIDTH OF SECTION CONTENTS */
 .section__content {
   max-width: 60em;
   margin-bottom: 10%;
@@ -1123,6 +1280,7 @@ label[for="off-canvas__search"] {
 @media screen and (max-width: 400px) {
   .section__content h1 {
     margin-top: 25%;
+    text-align: center;
   }
 }
 .section__content p {
@@ -1133,10 +1291,15 @@ label[for="off-canvas__search"] {
 .section__content p:last-of-type {
   margin-bottom: 0em;
 }
-
-/* this should be moved to project tabs section */
-.project-tabs__content p:last-of-type {
-  margin-bottom: 0em;
+@media screen and (max-width: 400px) {
+  .section__content p {
+    padding: 0 1.5em 0 1.5em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .section__content {
+    width: 100%;
+  }
 }
 
 .headshot, .bubble1, .bubble2 {
@@ -1188,7 +1351,7 @@ label[for="off-canvas__search"] {
 }
 
 .intro-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.5em;
   font-weight: 700;
   line-height: 1;
@@ -1200,37 +1363,21 @@ label[for="off-canvas__search"] {
   margin: 0;
   padding: 0 0 0 5em;
 }
-
 .article-list li {
   font-size: 1.25em;
 }
+@media screen and (max-width: 400px) {
+  .article-list {
+    padding: 0 1.5em 0 1.5em;
+  }
+}
 
-/* -----------------------------------------
-       SECTION CONTENT ANIMATION KEYFRAMES
--------------------------------------------*/
 @keyframes fadeInUp {
   0% {
     transform: translateY(8em);
   }
   100% {
     transform: translateY(0);
-  }
-}
-/* ------------------------------------------
-        SECTION CONTENT MEDIA QUERIES
---------------------------------------------- */
-@media screen and (max-width: 400px) {
-  .section__content {
-    width: 100%;
-  }
-
-  .section__content h1 {
-    text-align: center;
-  }
-
-  .section__content p,
-  .article-list {
-    padding: 0 1.5em 0 1.5em;
   }
 }
 
