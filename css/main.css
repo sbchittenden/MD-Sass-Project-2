@@ -2283,26 +2283,37 @@ label[for^="accordion-section"] :hover {
   position: relative;
   color: #484b5d;
 }
-
-.project-embed .tab-component h1 {
+.tab-component h1 {
   font-size: 2em;
   text-shadow: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: left;
 }
-
-.project-embed .tab-component p {
+.tab-component p {
   font-size: 1em;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.2;
   margin-bottom: 1em;
+}
+@media screen and (max-width: 548px) {
+  .tab-component p {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .tab-component {
+    font-size: 0.75em;
+  }
+}
+@media screen and (max-width: 548px) {
+  .tab-component {
+    font-size: 0.68em;
+  }
 }
 
 .tab-component__tabs {
   margin: -4em 0 0 0;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
@@ -2317,7 +2328,6 @@ label[for^="accordion-section"] :hover {
   background-color: #9296ab;
   border-radius: 3px 3px 0 0;
 }
-
 .tab-label:hover {
   background-color: #fe667b;
 }
@@ -2332,43 +2342,24 @@ label[for^="accordion-section"] :hover {
   background-color: #fafafa;
   border-radius: 0 3px 3px 3px;
 }
+@media screen and (max-width: 548px) {
+  .tab-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 
-#home-decor:checked ~ .tab-component__tabs .tab-label[for="home-decor"],
-#furniture:checked ~ .tab-component__tabs .tab-label[for="furniture"],
-#kitchen:checked ~ .tab-component__tabs .tab-label[for="kitchen"],
-#clearance:checked ~ .tab-component__tabs .tab-label[for="clearance"] {
+#home-decor:checked ~ .tab-component__tabs .tab-label[for="home-decor"], #furniture:checked ~ .tab-component__tabs .tab-label[for="furniture"], #kitchen:checked ~ .tab-component__tabs .tab-label[for="kitchen"], #clearance:checked ~ .tab-component__tabs .tab-label[for="clearance"] {
   color: #323232;
   background-color: #fafafa;
   border-top: solid 0.2em #fe667b;
 }
 
-#home-decor:checked ~ .tab-component__content .tab-content:nth-of-type(1),
-#furniture:checked ~ .tab-component__content .tab-content:nth-of-type(2),
-#kitchen:checked ~ .tab-component__content .tab-content:nth-of-type(3),
-#clearance:checked ~ .tab-component__content .tab-content:nth-of-type(4) {
+#home-decor:checked ~ .tab-component__content .tab-content:nth-of-type(1), #furniture:checked ~ .tab-component__content .tab-content:nth-of-type(2), #kitchen:checked ~ .tab-component__content .tab-content:nth-of-type(3), #clearance:checked ~ .tab-component__content .tab-content:nth-of-type(4) {
   opacity: 1;
   z-index: 5;
 }
 
-@media screen and (max-width: 768px) {
-  .tab-component {
-    font-size: 0.75em;
-  }
-}
-@media screen and (max-width: 548px) {
-  .tab-component {
-    font-size: 0.68em;
-  }
-
-  .tab-content {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .project-embed .tab-component p {
-    font-size: 1.2em;
-  }
-}
 .image_gallery {
   position: relative;
   max-width: 24em;
