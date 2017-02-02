@@ -2368,6 +2368,12 @@ label[for^="accordion-section"] :hover {
   background-color: #1e1e1e;
   overflow-x: hidden;
 }
+@media screen and (max-width: 360px) {
+  .image_gallery {
+    border: solid 0.2em #1e1e1e;
+    background-color: #1e1e1e;
+  }
+}
 
 .thumbs {
   position: absolute;
@@ -2375,7 +2381,6 @@ label[for^="accordion-section"] :hover {
   left: 1em;
   z-index: 10;
 }
-
 .thumbs label {
   display: inline-block;
   width: 3.5em;
@@ -2383,16 +2388,25 @@ label[for^="accordion-section"] :hover {
   border: solid 0.2em #1e1e1e;
   overflow: hidden;
 }
-
+.thumbs label:hover img {
+  transform: scale(1.25);
+}
 .thumbs label img {
   width: 100%;
   cursor: pointer;
   transition: transform 0.5s;
   opacity: 1;
 }
-
-.thumbs label:hover img {
-  transform: scale(1.25);
+@media screen and (max-width: 360px) {
+  .thumbs {
+    top: 0.5em;
+    left: 0.5em;
+  }
+  .thumbs label {
+    width: 2em;
+    height: 2em;
+    border: solid 0.1em #1e1e1e;
+  }
 }
 
 .full_sized_images img {
@@ -2400,8 +2414,6 @@ label[for^="accordion-section"] :hover {
   display: none;
   -webkit-animation: 1s scale-up-center;
   animation: 1s scale-up-center;
-  /* ------ alternate transition ----------- */
-  /*animation: 1s slide-in-left;*/
 }
 
 input[name="thumbs"]:checked + img {
@@ -2409,19 +2421,6 @@ input[name="thumbs"]:checked + img {
   opacity: 1;
 }
 
-@-webkit-keyframes slide-in-left {
-  0% {
-    display: block;
-    opacity: 0;
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
 @keyframes slide-in-left {
   0% {
     display: block;
@@ -2435,19 +2434,6 @@ input[name="thumbs"]:checked + img {
     transform: translateX(0);
   }
 }
-@-webkit-keyframes scale-up-center {
-  0% {
-    display: block;
-    opacity: 0;
-    -webkit-transform: scale(0.85);
-    transform: scale(0.85);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
 @keyframes scale-up-center {
   0% {
     display: block;
@@ -2459,23 +2445,6 @@ input[name="thumbs"]:checked + img {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
-  }
-}
-@media screen and (max-width: 360px) {
-  .image_gallery {
-    border: solid 0.2em #1e1e1e;
-    background-color: #1e1e1e;
-  }
-
-  .thumbs {
-    top: 0.5em;
-    left: 0.5em;
-  }
-
-  .thumbs label {
-    width: 2em;
-    height: 2em;
-    border: solid 0.1em #1e1e1e;
   }
 }
 /*body {
