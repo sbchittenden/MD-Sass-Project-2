@@ -1,7 +1,6 @@
 //=========================================//
 //           PROJECT TABS STYLES          //
 //========================================//
-
 input[id^="project"] {
   display: none;
 }
@@ -74,6 +73,9 @@ input[id^="project"] {
 
 .project-embed {
   width: 85%;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 %project-tab-link {

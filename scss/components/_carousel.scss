@@ -1,0 +1,197 @@
+//------------------------------------------//
+//                CAROUSEL STYLES           //
+//------------------------------------------//
+.project-carousel__container {
+  width: 100%;
+  height: 25em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  & input[type="radio"] {
+    display: none;
+  }
+}
+
+.project-carousel__display-area {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 100%;
+}
+
+.project-carousel__bullet-nav {
+  text-align: center;
+  width: 100%;
+  margin-top: 1em;
+  order: 2;
+  & label {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 1em;
+    border-radius: 50%;
+    background-color: $section-color-3;
+    transition: all 0.75s;
+    &:hover {
+      background-color: $highlight;
+      cursor: pointer;
+    }
+  }
+}
+
+.project-carousel__slide {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  visibility: hidden;
+  & picture {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    overflow-y: hidden;
+    flex: 25;
+  }
+  & img {
+    opacity: 0;
+    transition: all 0.75s;
+  }
+  @media screen and (max-width: 525px) {
+    overflow-y: hidden;
+  }
+}
+
+%carousel-nav-arrow {
+  display: block;
+  padding: 0.25em;
+  flex: 1;
+  z-index: 50;
+  cursor: pointer;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+.slide-nav__previous {
+  @extend %carousel-nav-arrow;
+  margin-right: 1em;
+}
+
+.slide-nav__next {
+  @extend %carousel-nav-arrow;
+  text-align: right;
+  margin-left: 1em;
+}
+
+
+#p1-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1),
+#p1-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2),
+#p1-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3),
+#p1-s4:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(4),
+#p2-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1),
+#p2-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2),
+#p2-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3),
+#p2-s4:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(4),
+#p3-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1),
+#p3-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2),
+#p3-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3),
+#p3-s4:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(4),
+#p4-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1),
+#p4-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2),
+#p4-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3),
+#p4-s4:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(4),
+#p5-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1),
+#p5-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2),
+#p5-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3),
+#p5-s4:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(4),
+#p6-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1),
+#p6-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2),
+#p6-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3),
+#p7-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1),
+#p7-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2),
+#p7-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3),
+#p8-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1),
+#p8-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2),
+#p8-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3),
+#p9-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1),
+#p9-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2),
+#p9-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3) {
+  visibility: visible;
+}
+
+#p1-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1) img,
+#p1-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2) img,
+#p1-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3) img,
+#p1-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(4) .project-embed,
+#p2-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1) img,
+#p2-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2) img,
+#p2-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3) img,
+#p2-s4:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(4) .project-embed,
+#p3-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1) img,
+#p3-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2) img,
+#p3-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3) img,
+#p3-s4:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(4) .project-embed,
+#p4-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1) img,
+#p4-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2) img,
+#p4-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3) img,
+#p4-s4:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(4) .project-embed,
+#p5-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1) img,
+#p5-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2) img,
+#p5-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3) img,
+#p5-s4:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(4) .project-embed,
+#p6-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1) img,
+#p6-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2) img,
+#p6-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3) img,
+#p7-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1) img,
+#p7-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2) img,
+#p7-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3) img,
+#p8-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1) img,
+#p8-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2) img,
+#p8-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3) img,
+#p9-s1:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(1) img,
+#p9-s2:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(2) img,
+#p9-s3:checked ~ .project-carousel__display-area .project-carousel__slide:nth-of-type(3) img {
+  opacity: 1;
+}
+
+#p1-s1:checked ~ .project-carousel__bullet-nav > label[for="p1-s1"],
+#p1-s2:checked ~ .project-carousel__bullet-nav > label[for="p1-s2"],
+#p1-s3:checked ~ .project-carousel__bullet-nav > label[for="p1-s3"],
+#p1-s4:checked ~ .project-carousel__bullet-nav > label[for="p1-s4"],
+#p2-s1:checked ~ .project-carousel__bullet-nav > label[for="p2-s1"],
+#p2-s2:checked ~ .project-carousel__bullet-nav > label[for="p2-s2"],
+#p2-s3:checked ~ .project-carousel__bullet-nav > label[for="p2-s3"],
+#p2-s4:checked ~ .project-carousel__bullet-nav > label[for="p2-s4"],
+#p3-s1:checked ~ .project-carousel__bullet-nav > label[for="p3-s1"],
+#p3-s2:checked ~ .project-carousel__bullet-nav > label[for="p3-s2"],
+#p3-s3:checked ~ .project-carousel__bullet-nav > label[for="p3-s3"],
+#p3-s4:checked ~ .project-carousel__bullet-nav > label[for="p3-s4"],
+#p4-s1:checked ~ .project-carousel__bullet-nav > label[for="p4-s1"],
+#p4-s2:checked ~ .project-carousel__bullet-nav > label[for="p4-s2"],
+#p4-s3:checked ~ .project-carousel__bullet-nav > label[for="p4-s3"],
+#p4-s4:checked ~ .project-carousel__bullet-nav > label[for="p4-s4"],
+#p5-s1:checked ~ .project-carousel__bullet-nav > label[for="p5-s1"],
+#p5-s2:checked ~ .project-carousel__bullet-nav > label[for="p5-s2"],
+#p5-s3:checked ~ .project-carousel__bullet-nav > label[for="p5-s3"],
+#p5-s4:checked ~ .project-carousel__bullet-nav > label[for="p5-s4"],
+#p6-s1:checked ~ .project-carousel__bullet-nav > label[for="p6-s1"],
+#p6-s2:checked ~ .project-carousel__bullet-nav > label[for="p6-s2"],
+#p6-s3:checked ~ .project-carousel__bullet-nav > label[for="p6-s3"],
+#p7-s1:checked ~ .project-carousel__bullet-nav > label[for="p7-s1"],
+#p7-s2:checked ~ .project-carousel__bullet-nav > label[for="p7-s2"],
+#p7-s3:checked ~ .project-carousel__bullet-nav > label[for="p7-s3"],
+#p8-s1:checked ~ .project-carousel__bullet-nav > label[for="p8-s1"],
+#p8-s2:checked ~ .project-carousel__bullet-nav > label[for="p8-s2"],
+#p8-s3:checked ~ .project-carousel__bullet-nav > label[for="p8-s3"],
+#p9-s1:checked ~ .project-carousel__bullet-nav > label[for="p9-s1"],
+#p9-s2:checked ~ .project-carousel__bullet-nav > label[for="p9-s2"],
+#p9-s3:checked ~ .project-carousel__bullet-nav > label[for="p9-s3"] {
+  background-color: #FFFFFF;
+}
