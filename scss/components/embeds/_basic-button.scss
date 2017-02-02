@@ -1,24 +1,16 @@
 #basic-buttons {
-  /*background: white;*/
   font-size: 0.7em;
   text-align: center;
+  & h3 {
+    margin: 1em 0;
+  }
+  & a.emb-button:link {
+    color: white;
+    text-decoration: none;
+  }
 }
 
-#basic-buttons h3 {
-  margin: 1em 0;
-}
-
-#basic-buttons a.button:link {
-  color: white;
-  text-decoration: none;
-}
-
-#basic-buttons .button:focus {
-  outline: none;
-}
-
-#basic-buttons .button {
-  /*font-family: 'Droid Sans', 'Helvetica', 'Arial', sans-serif;*/
+.emb-button {
   vertical-align: bottom;
   display: inline-block;
   color: white;
@@ -34,52 +26,46 @@
   cursor: pointer;
   margin-top: 2px;
   margin-right: 0.382em;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 1;
+    background-color: #5cb2a8;
+    border-top: solid 2px #4f9990;
+    border-right: solid 1px #4f9990;
+    border-bottom: solid 1px #58aaa1;
+    border-left: solid 1px #4f9990;
+  }
 }
 
-#basic-buttons .button:hover {
-  opacity: 0.8;
-}
-
-#basic-buttons .button:active {
-  opacity: 1;
-  background-color: #5cb2a8;
-  border-top: solid 2px #4f9990;
-  border-right: solid 1px #4f9990;
-  border-bottom: solid 1px #58aaa1;
-  border-left: solid 1px #4f9990;
-}
-
-#basic-buttons .button-sm {
+.emb-button-sm {
   font-size: 0.667em;
   padding: 1em;
-}
-
-#basic-buttons .button-md {
-  padding: 1em 1.5em 1em 1.5em;
-}
-
-#basic-buttons .button-lg {
-  font-size: 1.5em;
-  padding: 1em 2.25em 1em 2.25em;
-}
-
-@media screen and (max-width: 500px) {
-/*  #basic-buttons {
-    text-align: center;
-  }*/
-
-  #basic-buttons .button-sm {
+  @media screen and (max-width: 500px) {
     font-size: 0.667em;
     display: block;
     margin: 2em auto;
     width: 12em;
   }
-  #basic-buttons .button-md {
+}
+
+.emb-button-md {
+  padding: 1em 1.5em 1em 1.5em;
+  @media screen and (max-width: 500px) {
     display: block;
     margin: 0.25em auto;
     width: 12em;
   }
-  #basic-buttons .button-lg {
+}
+
+.emb-button-lg {
+  font-size: 1.5em;
+  padding: 1em 2.25em 1em 2.25em;
+  @media screen and (max-width: 500px) {
     font-size: 1.5em;
     display: block;
     margin: 1em auto;
