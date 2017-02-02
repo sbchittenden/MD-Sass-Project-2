@@ -1,6 +1,6 @@
-//----------------------------------------
-//              NAV BAR STYLES
-// ------------------------------------------- 
+//================================//
+//    MAIN NAVIGATION STYLES      //
+//===============================// 
 nav {
   text-align: left;
   width: 100%;
@@ -15,17 +15,34 @@ nav {
   ul {
     padding: 0;
   }
+  @media screen and (max-width: 795px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em 0 0.7em;
+    border-bottom: solid 3px $section-color-2;
+    &:after {
+      display: none;
+    }
+  }
 }
 
-// angled border at bottom of main menu
-.main-navigation:after {
-  border-top: 1em solid $section-color-1;
-  border-left: 100vw solid transparent;
-  content: "";
-  height: 0;
-  top: 7.7em;
-  position: fixed;
-  width: 0;
+.main-navigation {
+  // angled border at bottom of main menu
+  &:after {
+    border-top: 1em solid $section-color-1;
+    border-left: 100vw solid transparent;
+    content: "";
+    height: 0;
+    top: 7.7em;
+    position: fixed;
+    width: 0;
+  }
+  @media screen and (max-width: 795px) {
+    & h1 {
+      flex: 2;
+    }
+  }
 }
 
 // main navigation list (non-mobile)
@@ -75,6 +92,9 @@ nav {
       color: inherit;
     }
   }
+  @media screen and (max-width: 795px) {
+    display: none;
+  }
 }
 
 // search input styles
@@ -99,6 +119,9 @@ nav {
     top: -1.2em;
     font-size: 0.75em;
     color: $highlight;
+  }
+  @media screen and (max-width: 932px) {
+    width: 83%;
   }
 }
 
@@ -189,70 +212,41 @@ input[id^="nav__search-modal"] {
   font-size: 0.75em;
 }
 
+.range-1,
+.range-2,
+.range-3,
+.range-4 {
+  display: none;
+}
+
 //===== TO DO: function or mixin to automate these media queries ========//
 @media screen and (max-width: 360px) {
   .range-1 {
     display: block;
   }
-  .range-2 {
-    display: none;
-  }
-  .range-3 {
-    display: none;
-  }
-  .range-4 {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 360px) and (max-width: 600px) {
-  .range-1 {
-    display: none;
-  }
   .range-2 {
     display: block;
-  }
-  .range-3 {
-    display: none;
-  }
-  .range-4 {
-    display: none;
   }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
-  .range-1 {
-    display: none;
-  }
-  .range-2 {
-    display: none;
-  }
   .range-3 {
     display: block;
-  }
-  .range-4 {
-    display: none;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .range-1 {
-    display: none;
-  }
-  .range-2 {
-    display: none;
-  }
-  .range-3 {
-    display: none;
-  }
   .range-4 {
     display: block;
   }
 }
 
-//------------------------------------------
-//           OFF CANVAS NAV STYLES
-// ---------------------------------------------
+//=================================//
+//      OFF CANVAS NAV STYLES      //
+//=================================//
 input[type="checkbox"] {
   display: none;
 }
@@ -314,6 +308,16 @@ input[type="checkbox"] {
       color: $white;
     }
   }
+  // off-canvas menu item transitions
+  $time: 0.1;
+  $i: 1;
+  @while $i < 7 {
+    & .off-canvas__nav-list__main-item:nth-of-type(#{$i}) {
+      transition: margin-left #{$time}s 0.5s ease;
+    }
+    $i: $i + 1;
+    $time: $time + 0.2;
+  }
   @at-root #submenu__projects:checked + & li label[for="submenu__projects"] {
     background-color: $highlight;
   }
@@ -322,33 +326,6 @@ input[type="checkbox"] {
   }
 }
 
-//===== TO DO: function or mixin to automate these selecors ========//
-// off-canvas menu item transitions
-.off-canvas__nav-list .off-canvas__nav-list__main-item:nth-of-type(1) {
-  transition: margin-left 0.1s 0.5s ease;
-}
-
-.off-canvas__nav-list .off-canvas__nav-list__main-item:nth-of-type(2) {
-  transition: margin-left 0.3s 0.5s ease;
-}
-
-.off-canvas__nav-list .off-canvas__nav-list__main-item:nth-of-type(3) {
-  transition: margin-left 0.5s 0.5s ease;
-}
-
-.off-canvas__nav-list .off-canvas__nav-list__main-item:nth-of-type(4) {
-  transition: margin-left 0.7s 0.5s ease;
-}
-
-.off-canvas__nav-list .off-canvas__nav-list__main-item:nth-of-type(5) {
-  transition: margin-left 0.9s 0.5s ease;
-}
-
-.off-canvas__nav-list .off-canvas__nav-list__main-item:nth-of-type(6) {
-  transition: margin-left 1.1s 0.5s ease;
-}
-
-// end off-canvas menu item transitions
 .off-canvas-search {
   position: relative;
   margin-top: 0.5em;
@@ -414,63 +391,67 @@ label[for="off-canvas__search"] {
   }
 }
 
-//------------------
-// Stopped HERE continue
-// --------------------
-
-
-// ====== main off-canvas hamburger icon =====
+// main off-canvas hamburger icon
 #off-canvas-menu__burger {
   position: relative;
   display: none;
+  @media screen and (max-width: 795px) {
+    display: block;
+  }
 }
 
 .h-to-x {
   width: 2.25em;
   height: 2em;
   position: relative;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
   align-items: center;
-}
-
-.h-to-x:hover {
   cursor: pointer;
+  &:before {
+    content: "";
+    width: 2.25em;
+    height: 0.4em;
+    position: absolute;
+    background-color: $menu-icon-color;
+    border-radius: 0.1em;
+    top: 0;
+    transition: transform 0.15s linear, top 0.15s 0.15s ease-out;
+    @at-root #nav-off-canvas__container:target ~ nav > #off-canvas-menu__burger > & {
+      top: 0.875em;
+      transform: rotate(45deg);
+      transition: top 0.15s linear, transform 0.15s 0.15s ease-out;
+    }
+  }
+  &:after {
+    content: "";
+    width: 2.25em;
+    height: 0.4em;
+    position: absolute;
+    background-color: $menu-icon-color;
+    border-radius: 0.1em;
+    transition: transform 0.15s linear, bottom 0.15s 0.15s ease-out;
+    bottom: 0;
+    left: 0;
+    @at-root #nav-off-canvas__container:target ~ nav > #off-canvas-menu__burger > & {
+      bottom: 0.75em;
+      transform: rotate(-45deg);
+      transition: bottom 0.15s linear, transform 0.15s 0.15s ease-out;
+    }
+  }
+  @at-root #nav-off-canvas__container:target ~ nav > #off-canvas-menu__burger > & > span {
+    opacity: 0;
+  }
 }
 
 .h-to-x-bar {
   width: 2.25em;
   height: 0.4em;
-  background-color: #8a91a1;
+  background-color: $menu-icon-color;
   border-radius: 0.1em;
   display: block;
   top: 50%;
   opacity: 1;
   transition: all 0.3s linear;
-}
-
-.h-to-x:before {
-  content: "";
-  width: 2.25em;
-  height: 0.4em;
-  position: absolute;
-  background-color: #8a91a1;
-  border-radius: 0.1em;
-  top: 0;
-  transition: transform 0.15s linear, top 0.15s 0.15s ease-out;
-}
-
-.h-to-x:after {
-  content: "";
-  width: 2.25em;
-  height: 0.4em;
-  position: absolute;
-  background-color: #8a91a1;
-  border-radius: 0.1em;
-  transition: transform 0.15s linear, bottom 0.15s 0.15s ease-out;
-  bottom: 0;
-  left: 0;
 }
 
 #h-to-x-menu__closer {
@@ -481,59 +462,8 @@ label[for="off-canvas__search"] {
   top: 0;
   z-index: -100;
   display: none;
-}
-
-#nav-off-canvas__container:target ~ nav #h-to-x-menu__closer {
-  z-index: 100;
-  display: block;
-}
-
-#nav-off-canvas__container:target ~ nav > #off-canvas-menu__burger > .h-to-x:before {
-  top: 0.875em;
-  transform: rotate(45deg);
-  transition: top 0.15s linear, transform 0.15s 0.15s ease-out;
-}
-
-#nav-off-canvas__container:target ~ nav > #off-canvas-menu__burger > .h-to-x > span {
-  opacity: 0;
-}
-
-#nav-off-canvas__container:target ~ nav > #off-canvas-menu__burger > .h-to-x:after {
-  bottom: 0.75em;
-  transform: rotate(-45deg);
-  transition: bottom 0.15s linear, transform 0.15s 0.15s ease-out;
-}
-
-// ------------------------------------------
-//            NAV BAR MEDIA QUERIES 
-// --------------------------------------------- 
-@media screen and (max-width: 932px) {
-  .search {
-    width: 83%;
-  }
-}
-
-@media screen and (max-width: 795px) {
-  nav {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 0 1em 0 0.7em;
-    border-bottom: solid 3px #40444F;
-  }
-  nav:after {
-    display: none;
-  }
-  .nav_list {
-    display: none;
-  }
-  #off-canvas-menu__burger {
+  @at-root #nav-off-canvas__container:target ~ nav & {
+    z-index: 100;
     display: block;
-  }
-  .main-navigation h1 {
-    flex: 2;
   }
 }

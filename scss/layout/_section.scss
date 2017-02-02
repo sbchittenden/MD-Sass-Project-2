@@ -1,0 +1,20 @@
+//=======================================//
+//            SECTION STYLES             //
+//=======================================//
+
+.section {
+  min-height: 98vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  &:nth-of-type(1) {
+    min-height: 90vh;
+  }
+  @for $i from 2 through 6 {
+    &:nth-of-type(#{$i}) {
+      @include sectionator($i);
+    }
+  }
+}
