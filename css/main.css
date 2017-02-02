@@ -1047,4 +1047,191 @@ label[for="off-canvas__search"] {
   height: 0;
 }
 
+.greeting {
+  font-size: 4em;
+  color: #EF4D75;
+}
+#top:target ~ #landing > .greeting {
+  animation: 0.75s hiInUp cubic-bezier(0.185, 0.47, 0.03, 0.94);
+}
+.greeting > a {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+@keyframes hiInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(2em);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.greeting-v:after {
+  content: "V";
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  text-align: center;
+  padding-top: 0.75em;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: #40444F;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* LIMIT OVERALL WIDTH OF SECTION CONTENTS */
+.section__content {
+  max-width: 60em;
+  margin-bottom: 10%;
+  position: relative;
+  padding: 0 0.5em;
+}
+#about:target > .section__content {
+  animation: 0.75s fadeInUp cubic-bezier(0.185, 0.47, 0.03, 0.94);
+}
+#projects:target > .section__content {
+  animation: 0.75s fadeInUp cubic-bezier(0.185, 0.47, 0.03, 0.94);
+}
+#skills:target > .section__content {
+  animation: 0.75s fadeInUp cubic-bezier(0.185, 0.47, 0.03, 0.94);
+}
+#articles:target > .section__content {
+  animation: 0.75s fadeInUp cubic-bezier(0.185, 0.47, 0.03, 0.94);
+}
+#contact:target > .section__content {
+  animation: 0.75s fadeInUp cubic-bezier(0.185, 0.47, 0.03, 0.94);
+}
+.section__content h1 {
+  font-size: 4em;
+  margin: 17% 2% 5% 2%;
+  text-shadow: -3px 3px #373B44;
+}
+@media screen and (max-width: 400px) {
+  .section__content h1 {
+    margin-top: 25%;
+  }
+}
+.section__content p {
+  padding: 0 2em 0 5em;
+  line-height: 2;
+  text-align: justify;
+}
+.section__content p:last-of-type {
+  margin-bottom: 0em;
+}
+
+/* this should be moved to project tabs section */
+.project-tabs__content p:last-of-type {
+  margin-bottom: 0em;
+}
+
+.headshot, .bubble1, .bubble2 {
+  border-radius: 50%;
+  border: solid 0.7em #373B44;
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  margin: 0 2em 0 1em;
+  background-color: #FFFFFF;
+  background-blend-mode: multiply;
+}
+
+.headshot {
+  cursor: pointer;
+  width: 12em;
+  height: 12em;
+  float: left;
+  background: no-repeat center/contain url(../img/sbc_bw.png);
+}
+
+.bubble1, .bubble2 {
+  position: absolute;
+  opacity: 0;
+  z-index: 3;
+}
+
+.bubble1 {
+  background: no-repeat center/contain url(../img/sbc_tuolumne.jpg);
+  bottom: -10em;
+  left: 8em;
+  width: 10em;
+  height: 10em;
+  transition: opacity 0.5s 0.125s;
+}
+.headshot:hover + .bubble1 {
+  opacity: 1;
+}
+
+.bubble2 {
+  background: no-repeat center/contain url(../img/sbc_joes.jpg);
+  bottom: -7em;
+  left: -4em;
+  width: 8em;
+  height: 8em;
+  transition: opacity 0.5s 0.25s;
+}
+.headshot:hover ~ .bubble2 {
+  opacity: 1;
+}
+
+.intro-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1;
+  color: #EF4D75;
+}
+
+.article-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0 5em;
+}
+
+.article-list li {
+  font-size: 1.25em;
+}
+
+/* -----------------------------------------
+       SECTION CONTENT ANIMATION KEYFRAMES
+-------------------------------------------*/
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(8em);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* ------------------------------------------
+        SECTION CONTENT MEDIA QUERIES
+--------------------------------------------- */
+@media screen and (max-width: 400px) {
+  .section__content {
+    width: 100%;
+  }
+
+  .section__content h1 {
+    text-align: center;
+  }
+
+  .section__content p,
+  .article-list {
+    padding: 0 1.5em 0 1.5em;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
