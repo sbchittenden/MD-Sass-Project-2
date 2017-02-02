@@ -1,0 +1,104 @@
+.accordion ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion ul li {
+  position: relative;
+}
+
+label[for^="accordion-section"] {
+  display: block;
+  padding: 1em;
+  background-color: rgb(254, 102, 123);
+  color: rgb(255, 255, 255);
+  border-bottom: solid 1px rgb(250, 250, 250);
+  cursor: pointer;
+  -webkit-transition: background-color 0.25s;
+  transition: background-color 0.25s
+}
+
+label[for^="accordion-section"]:hover {
+  background-color: rgb(146, 150, 171);
+}
+
+.accordion ul li:first-of-type label {
+  border-radius: 3px 3px 0 0;
+}
+
+.accordion ul li:last-of-type label {
+  border-bottom: none;
+  border-radius: 0 0 3px 3px;
+}
+
+.accordion ul li:last-of-type .accordion-section-content {
+  border-radius: 0 0 3px 3px;
+}
+
+.accordion-section-content {
+  padding: 0 1em;
+  height: 0;
+  background-color: rgb(250, 250, 250);
+  overflow-y: hidden;
+  -webkit-transition: height 1s;
+  transition: height 1s;
+}
+
+.accordion p {
+  line-height: 1.2;
+  color: rgb(72, 75, 93);
+  font-family: 'Montserrat';
+}
+
+.direction-chev {
+  position: absolute;
+  right: 1.5em;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+#accordion-section-1:checked + label[for$="-1"] > i,
+#accordion-section-2:checked + label[for$="-2"] > i,
+#accordion-section-3:checked + label[for$="-3"] > i,
+#accordion-section-4:checked + label[for$="-4"] > i {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+#accordion-section-1:checked + label[for$="-1"] + .accordion-section-content,
+#accordion-section-2:checked + label[for$="-2"] + .accordion-section-content,
+#accordion-section-3:checked + label[for$="-3"] + .accordion-section-content,
+#accordion-section-4:checked + label[for$="-4"] + .accordion-section-content {
+  height: 200px;
+}
+
+@media screen and (max-width: 1024px) {
+  label[for^="accordion-section"] {
+    background-color: #707070;
+  }
+  label[for^="accordion-section"]:hover {
+    background-color: #8f8f8f;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  label[for^="accordion-section"] {
+    background-color: #16a085;
+  }
+  label[for^="accordion-section"]:hover {
+    background-color: #1abc9c;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  label[for^="accordion-section"] {
+    background-color: #19AAD1;
+  }
+  label[for^="accordion-section"]:hover {
+    background-color: #4dc8ea;
+  }
+}

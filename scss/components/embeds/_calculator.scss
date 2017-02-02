@@ -1,0 +1,319 @@
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:700);
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,500);
+
+.clear-float {
+  clear: both;
+}
+
+#calc-wrap {
+    font-size: 0.525em;
+    background-color: #24272b;
+    background-image: url('../img/calculator/dp_2.jpg');
+    background-size: cover;
+    margin: 2em auto;
+    width: 25em;
+    padding: 0.4em;
+    border-radius: 0.5em;
+    border: #0f0f0f solid 1px;
+    background-position: bottom;
+    box-shadow: inset 1px 1px 2px rgba(0,0,0,0.7),
+                inset 2px 2px 8px #0f0f0f,
+                inset 4px 2px 20px #191919,
+                inset 6px 6px 30px #252525,
+                inset -2px -1px 5px rgba(0,0,0,0.7),
+                inset -4px -2px 10px #0f0f0f,
+                2px 2px 5px #0e0e0e,
+                #050505 4px 4px,
+                #050505 6px 6px,
+                rgba(0,0,0,0.7) 5px 5px 2px,
+                rgba(0,0,0,0.7) 10px 0px 5px,
+                rgba(0,0,0,0.7) 15px 15px 40px,
+                rgba(0,0,0,0.7) 45px 29px 60px;
+}
+
+#display-bg {
+    background-color: #dadfe1;
+    background-image: url('../img/calculator/brushed.png');
+    margin: 2em auto;
+    width: 23.188em;
+    height: 5em;
+    position: relative;
+    box-shadow: inset #656565 1px 1px 10px,
+                inset #555555 -1px -1px 8px;
+    border: #454545 solid 2px;
+    border-radius: 4px
+}
+
+#display {
+  color: #424242;
+  font-family: 'Rubik', 'Inconsolata', 'Courier', monospace;
+  font-size: 4em;
+  margin: 0 auto;
+  width: 98%;
+  position: absolute;
+  top: 50%;
+  right: 0.1em;
+  transform: translate(0, -50%);
+  text-align: right;
+  overflow: scroll;
+}
+
+#calc-logo {
+  font-family: 'Rubik', 'Courier', monospace;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #f7f2e8;
+  color: #1e1e1d;
+  display: inline-block;
+  padding: 0.5em 0.44em;
+  width: 10.875em;
+  margin: 0em 8.4em 1.5em 0.938em;
+  border: solid 1px #66635f;
+  border-radius: 2px;
+  box-shadow: inset white 0px 1px 2px, 
+              inset #ffffff 1px 1px,
+              #444444 1px 0px 2px, 
+              black 1px 1px;
+}
+
+#keyboard-wrap {
+  background-color: rgba(5,5,5,0.35);
+  border-radius: 0.25em;
+  margin: 0.8em 0.8em 2em 0.8em;
+  padding-top: 0.625em;
+  padding-bottom: 0.625em;
+  padding-left: 0.125em;
+  /*border: solid 1px #353535;*/
+  box-shadow: inset 2px 2px 2px #050505,
+              inset 4px 4px 10px black,
+              inset 6px 6px 3px black,
+              inset -2px -2px 2px black,
+              1px 1px 2px #252525,
+              -1px -1px 3px #252525;
+  padding-left: 0.625em;
+}
+/* cursor blink animation */
+#cursor {
+    -webkit-animation-name: blink;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: blink;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blink {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blink {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blink {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+/* end cursor blink animation */
+
+.key {
+    width: 4em;
+    height: 3.625em;
+    background-color: #f7f2e8;
+    color: #1e1e1d;
+    float: left;
+    margin: 0.625em 0.6em 0.625em 0.8em;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 3px #5b5044,
+                #d1c2b3 1px 1px,
+                #d1c2b3 2px 2px, 
+                #d1c2b3 3px 3px; 
+    text-transform: uppercase;
+}
+
+.key p {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 700;
+}
+
+.key:hover {
+  color: black;
+  cursor: pointer;
+  background-color: #FDE3A7;
+  box-shadow: inset 2px 2px 10px #fcc755,
+              inset -2px -2px 10px #fcc755,
+                #e5ac50 1px 1px,
+                #dda64d 2px 2px, 
+                #cc9b47 3px 3px;
+
+}
+
+.key:active {
+  background-color: #f9d381;
+  color: #f7f2e8;
+  box-shadow: inset #cc9b47 1px 1px 10px, 
+              inset #cc9b47 2px 2px 10px;
+
+}
+
+.key:active > p {
+  margin: 0 auto;
+  position: absolute;
+  top: 54%;
+  left: 53%;
+  margin-right: -53%;
+  transform: translate(-54%, -53%);
+  font-size: 2em;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 700;
+}
+
+.color-invert {
+  color: #f7f2e8;
+  background-color: #202020;
+  font-weight: 300;
+  box-shadow: inset 0px 0px 3px #5b5044,
+                #222222 1px 1px,
+                #222222 2px 2px, 
+                #222222 3px 3px;
+}
+
+.color-invert:hover {
+  color: white;
+  background-color: #34495E;
+  box-shadow: inset 2px 2px 10px #5c81a5,
+              inset -2px -2px 10px #5c81a5,
+                #4a6884 1px 1px,
+                #45617c 2px 2px, 
+                #34495E 3px 3px;
+}
+
+.color-invert:active {
+  box-shadow: inset #253544 1px 1px 10px, 
+              inset #253544 2px 2px 10px;
+  background-color: #5c81a5;
+  color: black;
+}
+
+
+.red-key {
+  background-color: #CF2324;
+  color: black;
+  box-shadow: inset 0px 0px 3px #5b5044,
+                #a32727 1px 1px,
+                #a32727 2px 2px, 
+                #a32727 3px 3px;
+}
+
+.red-key:hover {
+  background-color: #f95959;
+  box-shadow: inset 2px 2px 10px #CF2324,
+              inset -2px -2px 10px #CF2324,
+                #c62121 1px 1px,
+                #bc2020 2px 2px, 
+                #b22020 3px 3px;
+}
+
+.red-key:active {
+  background-color: #CF2324;
+  box-shadow: inset 1px 1px 10px #891818,
+              inset 2px 2px 10px #891818;
+}
+
+.blue-key {
+  background-color: #A1C8D3;
+  color: black;
+  box-shadow: inset 2px 2px 10px #6e878c,
+              inset -2px -2px 10px #6e878c,
+                #647b7f 1px 1px,
+                #5a6f72 2px 2px, 
+                #4c5e60 3px 3px; 
+}
+
+.blue-key:hover {
+  background-color: #bae6f2;
+  box-shadow: inset 2px 2px 10px #87a7af,
+              inset -2px -2px 10px #87a7af,
+                #79949b 1px 1px, 
+                #6a8187 2px 2px,
+                #54666b 3px 3px;
+  color: black;
+}
+
+.blue-key:active {
+  background-color: #4b9baf;
+  box-shadow: inset 1px 1px 10px #54666b,
+              inset 2px 2px 10px #54666b;
+  color: #f7f2e8;
+}
+
+.green-key {
+  background-color: #87D37C;
+  box-shadow: inset 2px 2px 10px #6faa64,
+              inset -2px -2px 10px #6faa64,
+                #619357 1px 1px,
+                #58844f 2px 2px, 
+                #496d41 3px 3px; 
+}
+
+.green-key:hover {
+  background-color: #97f28a;
+  box-shadow: inset 2px 2px 10px #6faa64,
+              inset -2px -2px 10px #6faa64,
+                #619357 1px 1px,
+                #58844f 2px 2px, 
+                #496d41 3px 3px;
+  color: black;
+}
+
+.green-key:active {
+  background-color: #7ebf74;
+  box-shadow: inset 1px 1px 10px #496d41,
+              inset 2px 2px 10px #496d41;
+  color: #f7f2e8;
+}
+
+.orange-key {
+  background-color: #F89406;
+  color: black;
+  box-shadow: inset 0px 0px 3px #e28a0d,
+                #c4770b 1px 1px,
+                #c4770b 2px 2px, 
+                #c4770b 3px 3px;
+}
+
+.orange-key:hover {
+  background-color: #ffc563;
+  box-shadow: inset 2px 2px 10px #c4770b,
+              inset -2px -2px 10px #c4770b,
+                #ba710b 1px 1px,
+                #af680a 2px 2px, 
+                #af680a 3px 3px;
+}
+
+.orange-key:active {
+  background-color: #E87E04;
+  box-shadow: inset 1px 1px 10px #935708,
+              inset 2px 2px 10px #935708;
+}
