@@ -1,0 +1,16 @@
+//-----------------------------------------//
+//              FOOTER STYLES              //
+//-----------------------------------------//
+
+footer {
+  background-color: $section-color-1;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $montserrat;
+}
+
+footer > span {
+  color: $section-color-6;
+}

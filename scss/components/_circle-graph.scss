@@ -1,0 +1,103 @@
+// ------------------------------------------//  
+//                CIRCLE GRAPH STYLES        //
+//-------------------------------------------//
+
+.circle-graph__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.circle-graph {
+  position: relative;
+  margin: 0 4em 6em 4em;
+}
+
+.circle-graph__background {
+  width: 12em;
+  height: 12em;
+  background-color: $gray-2;
+  border-radius: 50%;
+}
+
+.circle-graph__opposite {
+  background-color: $highlight;
+}
+
+%circle-graph-base {
+  width: 6em;
+  height: 6em;
+  background-color: $highlight;
+  position: absolute;
+}
+
+.circle-graph__q1 {
+  @extend %circle-graph-base;
+  top: 0;
+  left: 6em;
+  border-top-right-radius: 100%;
+}
+
+.circle-graph__q2 {
+  @extend %circle-graph-base;
+  top: 6em;
+  left: 6em;
+  border-bottom-right-radius: 100%;
+}
+
+.circle-graph__q3 {
+  @extend %circle-graph-base;
+  top: 6em;
+  left: 0;
+  border-bottom-left-radius: 100%;
+}
+
+.circle-graph__q4 {
+  @extend %circle-graph-base;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 100%;
+}
+
+.circle-graph__85 {
+  @extend %circle-graph-base;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 100%;
+  transform-origin: bottom right;
+  transform: rotate(-59deg);
+}
+
+.circle-graph__15 {
+  @extend %circle-graph-base;
+  top: 0;
+  left: 6em;
+  border-top-right-radius: 100%;
+  transform-origin: bottom left;
+  transform: rotate(59deg);
+}
+
+.circle-graph__unfill {
+  background-color: $gray-2;
+}
+
+.circle-graph__knockout {
+  width: 10em;
+  height: 10em;
+  background-color: $section-color-4;
+  border-radius: 50%;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+.circle-graph__label {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  font-family: $montserrat;
+  font-size: 1.25em;
+}

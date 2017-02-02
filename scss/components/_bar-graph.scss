@@ -1,0 +1,129 @@
+//------------------------------------------//
+//              SKILLS GRAPH STYLES         //
+//------------------------------------------//
+.skill-graphs__container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 10%;
+  padding: 0 1em;
+  @media screen and (max-width: 500px) {
+    padding: 1em 3em 0em 1em;
+  }
+  @media screen and (max-width: 350px) {
+    font-size: 0.7em;
+  }
+}
+
+.skills-graphs__graph-label {
+  flex: 1 0 100%;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.skills-graph {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25em;
+  justify-content: space-around;
+  border-bottom: solid 1px $white;
+  font-size: 0.9em;
+  margin-bottom: 10em;
+}
+
+.y-axis {
+  list-style-type: none;
+  margin: 0 1em 0 0.8em;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+  & li {
+    margin-bottom: 1em;
+  }
+}
+
+.x-axis {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  position: relative;
+  height: 10em;
+  flex: 2;
+  & li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    &:nth-of-type(odd) {
+      background-color: $white;
+    }
+    &:nth-of-type(even) {
+      background-color: $gray-2;
+    }
+    &:nth-of-type(3n) {
+      background-color: $highlight;
+    }
+  }
+}
+
+.bar-item {
+  width: 2.188em;
+  cursor: help;
+  &:hover ~ .skills-graphs__tool-tip {
+    visibility: visible;
+    opacity: 1;
+  }
+  @media screen and (max-width: 500px) {
+    width: 1.9em;
+  }
+}
+
+// loop for graph bar heights
+@for $i from 1 through 9 {
+  .y-#{$i}5 {
+    height: $i+.5em;
+  }
+}
+
+.title {
+  position: absolute;
+  transform-origin: top left;
+  bottom: -1.5em;
+  left: 1.3em;
+  transform: rotate(50deg);
+  @media screen and (max-width: 500px) {
+    font-size: 0.85em;
+  }
+}
+
+.skills-graphs__tool-tip {
+  position: absolute;
+  top: -4.25em;
+  left: -100%;
+  width: 10em;
+  background-color: $section-color-1;
+  color: $white;
+  font-size: 0.8em;
+  text-align: center;
+  padding: 0.8em 0;
+  border-radius: 0.2em;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 15;
+  &:after {
+    content: "";
+    width: 1em;
+    height: 1em;
+    transform: rotate(45deg);
+    background-color: $section-color-1;
+    position: absolute;
+    bottom: -0.4em;
+    left: 40%;
+  }
+}

@@ -1,0 +1,177 @@
+//------------------------------------------- //
+//  BUSINESS CARD STYLES (CONTACT VERSION)    //
+//--------------------------------------------//
+@media screen and (max-width: 700px) {
+  .business-card__container {
+    font-size: 2.5vw;
+  }
+}
+
+.card-container {
+  width: 34.375em;
+  height: 20.438em;
+  position: relative;
+  perspective: 500px;
+  margin: 5% auto;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  color: $white;
+  font-weight: 300;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  -webkit-backface-visibility: hidden;
+  & h1 {
+    font-weight: 300;
+    font-size: 3em;
+    margin: 0;
+    font-family: $lato;
+    text-shadow: none;
+    @media screen and (max-width: 400px) {
+      text-align: left;
+    }
+  }
+  & p {
+    margin-bottom: 0.8em;
+    padding: 0;
+    line-height: normal;
+    text-align: left;
+    font-family: $lato;
+    @media screen and (max-width: 400px) {
+      font-size: 1.3em;
+    }
+  }
+  & > div[class^="card-"] {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: .25em;
+  }
+  @at-root label[for="card-flip"]:hover + & {
+    transform: rotateX(15deg);
+    @at-root #card-flip:checked ~ .card-container & {
+      transform: rotateX(165deg);
+    }
+  }
+  @at-root #card-flip:checked ~ .card-container label[for="card-flip"] + & {
+    transform: rotateX(180deg);
+  }
+}
+
+.subheader {
+  font-weight: 300;
+  font-size: 1em;
+  margin: 0;
+  font-family: $lato;
+  @media screen and (max-width: 400px) {
+    font-size: 1.3em;
+  }
+}
+
+.card-back__name {
+  color: $black;
+  background-color: transparentize($white, 0.5);
+  display: inline-block;
+  font-weight: 400;
+  position: absolute;
+  width: 8.6em;
+  text-align: center;
+  bottom: 0.4em;
+  right: 1em;
+  border-radius: 0.2em;
+  margin-bottom: 0.8em;
+  font-family: $lato;
+}
+
+label[for="card-flip"] {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+%rotate-card-icon {
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0.75em;
+  top: 0.8em;
+  color: transparentize($white, 0.25);
+  -webkit-backface-visibility: hidden;
+}
+
+.card-front {
+  width: 100%;
+  height: 100%;
+  padding: 1em 1.3em;
+  background-color: $section-color-1;
+  background: $section-color-1 url(../img/business_card/skulls_50.png) repeat;
+  & > .fa-reply {
+    @extend %rotate-card-icon;
+  }
+  & p a {
+    text-decoration: none;
+    color: $highlight;
+    font-weight: 300;
+    margin-right: 2em;
+    -webkit-backface-visibility: hidden;
+  }
+}
+
+.encyclopedia-link {
+  width: 50%;
+  position: absolute;
+  bottom: 1.1em;
+  font-family: $lato;
+  -webkit-backface-visibility: hidden;
+  /* hiding encyclopedia link for now */
+  display: none;
+  & a {
+    color: $highlight;
+    font-weight: 300;
+  }
+  & > span {
+    font-weight: 300;
+  }
+  & img {
+    float: left;
+    width: 18%;
+    margin-right: 0.75em;
+  }
+}
+
+.site-links {
+  list-style-type: none;
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 1.1em;
+  left: 1em;
+  /* align left while encylopedia link is hidden */
+  /*right: 1em;*/
+  width: auto;
+  -webkit-backface-visibility: hidden;
+  & li {
+    display: inline-block;
+    & a img {
+      width: 80%;
+    }
+  }
+}
+
+.card-back {
+  width: 100%;
+  height: 100%;
+  background-color: #dababb;
+  background: url(../img/business_card/sbc2-2.jpg) center / cover no-repeat;
+  text-align: right;
+  transform: rotateX(180deg);
+  & > .fa-reply {
+    @extend %rotate-card-icon;
+  }
+}

@@ -11,10 +11,15 @@
 @import 'base/typography';
 @import 'base/globals';
 
+@import 'layout/section';
+@import 'layout/section-content';
+@import 'layout/footer';
+
 @import 'components/buttons';
 @import 'components/main-nav';
 @import 'components/project-tabs';
 @import 'components/carousel';
+@import 'components/circle-graph';
+@import 'components/bar-graph';
+@import 'components/contact-business-card';
 
-@import 'layout/section';
-@import 'layout/section-content';
