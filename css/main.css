@@ -1064,6 +1064,9 @@ input[type="checkbox"] {
 .off-canvas__nav-list li:hover {
   background-color: #5B616F;
 }
+.off-canvas__nav-list li:hover:last-of-type {
+  background-color: transparent;
+}
 .off-canvas__nav-list li a {
   padding: 1em 0.75em;
   display: block;
@@ -1098,9 +1101,6 @@ input[type="checkbox"] {
 .off-canvas-search {
   position: relative;
   margin-top: 0.5em;
-}
-.off-canvas-search:hover {
-  background-color: #40444F;
 }
 .off-canvas-search .search {
   margin: 0 0.5em 0 1em;

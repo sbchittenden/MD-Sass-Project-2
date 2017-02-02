@@ -299,6 +299,9 @@ input[type="checkbox"] {
     margin-left: -8em;
     &:hover {
       background-color: $section-color-5;
+      &:last-of-type {
+        background-color: transparent;
+      }
     }
     a {
       padding: 1em 0.75em;
@@ -328,9 +331,6 @@ input[type="checkbox"] {
 .off-canvas-search {
   position: relative;
   margin-top: 0.5em;
-  &:hover {
-    background-color: $section-color-2;
-  }
   & .search {
     margin: 0 0.5em 0 1em;
     padding-left: 0.5em;
