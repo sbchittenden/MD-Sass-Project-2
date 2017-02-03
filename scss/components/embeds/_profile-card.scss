@@ -1,8 +1,3 @@
-#md-profile-card a {
-  text-decoration: none;
-  color: black;
-}
-
 #md-profile-card {
   width: 50%;
   height: 24em;
@@ -14,6 +9,10 @@
   position: relative;
   z-index: 10;
   overflow: hidden;
+  & a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 .card-header-img {
@@ -26,6 +25,18 @@
   min-height: 50%;
   position: absolute;
   z-index: -10;
+  @media screen and (max-width: 751px) {
+    min-height: 25%;
+    background-size: cover;
+  }
+  @media screen and (max-width: 556px) {
+    background-image: none;
+    background-color: #fff;
+  }
+  @media screen and (max-width: 556px) {
+    background-image: none;
+    background-color: #fff;
+  }
 }
 
 .info-bckgrnd {
@@ -36,6 +47,14 @@
   position: absolute;
   top: 7em;
   transform: skew(0deg, 168deg);
+  @media screen and (max-width: 751px) {
+    min-width: 100%;
+    height: 50%;
+    z-index: -5;
+    position: absolute;
+    top: 18%;
+    transform: skew(0deg, 168deg);
+  }
 }
 
 .pic {
@@ -44,12 +63,23 @@
   padding-right: 10%;
   padding-top: 16%;
   padding-bottom: 12%;
+  @media screen and (max-width: 556px) {
+    text-align: center;
+    padding: 10%;
+  }
 }
 
 .profile-pic {
   border: solid 5px black;
   border-radius: 50%;
   max-width: 50%;
+  @media screen and (max-width: 556px) {
+    border: solid 3px black;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    max-width: 90%;
+  }
 }
 
 .light {
@@ -57,19 +87,25 @@
 }
 
 .name {
-  /*   font-size: 1.2em; */
   margin-top: -25%;
   padding-right: 10%;
   background-color: white;
   margin-bottom: -5%;
-}
-
-.name h1 {
-  font-family: "Source Code Pro", monospace;
-  padding-left: 10%;
-  font-size: 1.85em;
-  text-shadow: none;
-  color: black;
+  & h1 {
+    font-family: "Source Code Pro", monospace;
+    padding-left: 10%;
+    font-size: 1.85em;
+    text-shadow: none;
+    color: black;
+  }
+  @media screen and (max-width: 751px) {
+    font-size: 0.75em;
+  }
+  @media screen and (max-width: 556px) {
+    font-size: 0.6em;
+    padding-right: 0;
+    margin-top: -10%;
+  }
 }
 
 .bio {
@@ -80,14 +116,16 @@
   border-top: solid 5px black;
   padding-left: 3em;
   padding-bottom: 1.25em;
-}
-
-.bio p {
-  color: black;
-  font-size: 0.6em;
-  font-family: "Source Code Pro";
-  line-height: 1.3;
-  text-align: right;
+  & p {
+    color: black;
+    font-size: 0.6em;
+    font-family: "Source Code Pro";
+    line-height: 1.3;
+    text-align: right;
+  }
+  @media screen and (max-width: 556px) {
+    padding-left: 1em;
+  }
 }
 
 .return {
@@ -95,57 +133,14 @@
   text-align: right;
   border-top: solid 5px black;
   margin-left: 8em;
+  @media screen and (max-width: 556px) {
+    margin-left: 2em;
+    font-size: 0.9em;
+  }
 }
 
 .bio-link {
   font-weight: 700;
   margin-right: 2em;
   font-family: 'Source Code Pro';
-}
-
-@media screen and (max-width: 751px) {
-  .card-header-img {
-    min-height: 25%;
-    background-size: cover;
-  }
-  .name {
-    font-size: 0.75em;
-  }
-  .info-bckgrnd {
-    min-width: 100%;
-    height: 50%;
-    z-index: -5;
-    position: absolute;
-    top: 18%;
-    transform: skew(0deg, 168deg);
-  }
-}
-
-@media screen and (max-width: 556px) {
-  .card-header-img {
-    background-image: none;
-    background-color: #fff;
-  }
-  .name {
-    font-size: 0.6em;
-    padding-right: 0;
-    margin-top: -10%;
-  }
-  .pic {
-    text-align: center;
-    padding: 10%;
-  }
-  .profile-pic {
-    border: solid 3px black;
-    border-radius: 0;
-    width: auto;
-    height: auto;
-    max-width: 90%;
-  }
-  .bio {
-    padding-left: 1em;
-  }
-  .return {
-    margin-left: 2em;
-  }
 }
