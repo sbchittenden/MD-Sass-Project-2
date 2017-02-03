@@ -2647,52 +2647,6 @@ Button styling
   border: solid 1px #3c2415;
 }
 
-#color-build-form-wrap h1 {
-  font-family: 'Bangers', 'Helvetica', 'Arial', sans-serif;
-  font-size: 4em;
-  margin-bottom: 0;
-  color: #ffe100;
-  text-shadow: -3px -2px black, -2px -2px black, 5px 6px black, 4px 6px black, 4px -3px black, 7px 5px black, -3px 2px black;
-}
-
-#color-build-form-wrap h2 {
-  font-family: 'Bangers', 'Helvetica', 'Arial', sans-serif;
-  font-size: 3.5em;
-  color: #ffe100;
-  text-shadow: -3px -2px black, -2px -2px black, 5px 6px black, 4px 6px black, 4px -3px black, 7px 5px black, -3px 2px black;
-  transform: rotate(-5deg);
-}
-
-#color-build-form-wrap input {
-  display: block;
-  height: 1.75em;
-  font-weight: 300;
-  width: 100%;
-  color: #353535;
-  border: solid 1px #d8d8d6;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-#color-build-form-wrap form {
-  font-family: 'Bangers', 'Helvetica', 'Arial', sans-serif;
-  border-radius: 5px;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-#color-build-form-wrap textarea {
-  margin-top: 0.5em;
-  width: 100%;
-  min-height: auto;
-  overflow: auto;
-  resize: none;
-  border-radius: 5px;
-  border: solid 1px #CCCBC9;
-  background-color: #f2f2f2;
-}
-
 #color-build-form-wrap {
   color: #d11919;
   border: solid 1px #CCCBC9;
@@ -2703,45 +2657,69 @@ Button styling
   border-radius: 5px;
   font-size: 0.7em;
 }
-
-@media screen and (max-width: 525px) {
-  #color-build-form-wrap {
-    font-size: 0.6em;
-    width: 90%;
-  }
+#color-build-form-wrap h1 {
+  font-family: "Bangers", cursive;
+  font-size: 4em;
+  margin-bottom: 0;
+  color: #ffe100;
+  text-shadow: -3px -2px black, -2px -2px black, 5px 6px black, 4px 6px black, 4px -3px black, 7px 5px black, -3px 2px black;
 }
-@media screen and (max-width: 400px) {
-  #color-build-form-wrap {
-    width: 100%;
-  }
+#color-build-form-wrap h2 {
+  font-family: "Bangers", cursive;
+  font-size: 3.5em;
+  color: #ffe100;
+  text-shadow: -3px -2px black, -2px -2px black, 5px 6px black, 4px 6px black, 4px -3px black, 7px 5px black, -3px 2px black;
+  transform: rotate(-5deg);
+}
+#color-build-form-wrap input {
+  display: block;
+  height: 1.75em;
+  font-weight: 300;
+  width: 100%;
+  color: #353535;
+  border: solid 1px #d8d8d6;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+#color-build-form-wrap form {
+  font-family: "Bangers", cursive;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+#color-build-form-wrap textarea {
+  margin-top: 0.5em;
+  width: 100%;
+  min-height: auto;
+  overflow: auto;
+  resize: none;
+  border-radius: 5px;
+  border: solid 1px #CCCBC9;
+  background-color: #f2f2f2;
 }
 #color-build-form-wrap .input-wrap {
   padding: 1em;
   margin: 1em;
   clear: both;
 }
-
 #color-build-form-wrap .slider-wrap {
   width: 45%;
   float: left;
 }
-
-#color-build-form-wrap .slider-wrap div label {
-  font-family: 'Bangers';
-}
-
 #color-build-form-wrap .slider-wrap > div {
   clear: both;
   margin-bottom: 0.5em;
 }
-
+#color-build-form-wrap .slider-wrap > div label {
+  font-family: "Bangers", cursive;
+}
 #color-build-form-wrap .color-window-wrap {
   width: 45%;
   float: right;
   padding: 1%;
   background: repeat url(worn_dots.png);
 }
-
 #color-build-form-wrap .range-numbers {
   font-size: 0.75em;
   color: lightgray;
@@ -2749,104 +2727,18 @@ Button styling
   margin-top: -0.65em;
   height: 1.25em;
 }
-
 #color-build-form-wrap .width-50 {
   width: 50%;
 }
-
 #color-build-form-wrap .fl-lft {
   float: left;
 }
-
 #color-build-form-wrap .fl-rt {
   float: right;
 }
-
 #color-build-form-wrap .text-right {
   text-align: right;
 }
-
-label[for="green"] {
-  color: #36c969;
-}
-
-label[for="blue"] {
-  color: #207bea;
-}
-
-label[for="alpha"] {
-  color: #595656;
-}
-
-/* ----------- 
-orange explosion
--------------*/
-#pow {
-  width: 0;
-  height: 0;
-  border-left: 4.375em solid transparent;
-  border-right: 3.750em solid transparent;
-  border-bottom: 6.250em solid #bf3333;
-  position: relative;
-  margin: 1em;
-  z-index: 1;
-}
-
-#pow:before {
-  width: 0;
-  height: 0;
-  border-left: 1.563em solid transparent;
-  border-right: 6.563em solid transparent;
-  border-top: 3.125em solid #bf3333;
-  position: absolute;
-  content: "";
-  top: 1.875em;
-  left: -3.125em;
-  transform: rotate(340deg);
-}
-
-#pow:after {
-  width: 0;
-  height: 0;
-  border-left: 3.125em solid transparent;
-  border-right: 5.625em solid transparent;
-  border-top: 6.250em solid #bf3333;
-  position: absolute;
-  content: "";
-  top: 1.875em;
-  left: -3.125em;
-  transform: rotate(12deg);
-}
-
-#pow div {
-  position: absolute;
-  top: 1.5em;
-  left: -4em;
-  z-index: 1000;
-  transform: rotate(-5deg);
-}
-
-#color-builder {
-  position: absolute;
-  top: 3em;
-  left: 8.5em;
-  z-index: 2;
-}
-
-/* -------------------------------------
-color-window background color
- --------------------------------------*/
-#color-window {
-  background-color: #2d2d69;
-}
-
-/* ------------------------------------
-Button styling
---------------------------------------- */
-#color-build-form-wrap .button:focus {
-  outline: none;
-}
-
 #color-build-form-wrap .button {
   font-family: 'Bangers', 'Helvetica', 'Arial', sans-serif;
   vertical-align: bottom;
@@ -2865,11 +2757,12 @@ Button styling
   margin-top: 0.5em;
   width: 100%;
 }
-
+#color-build-form-wrap .button:focus {
+  outline: none;
+}
 #color-build-form-wrap .button:hover {
   opacity: 0.8;
 }
-
 #color-build-form-wrap .button:active {
   opacity: 1;
   background-color: #992929;
@@ -2877,6 +2770,82 @@ Button styling
   border-right: solid 1px #751f1f;
   border-bottom: solid 1px #bf3333;
   border-left: solid 1px #751f1f;
+}
+@media screen and (max-width: 525px) {
+  #color-build-form-wrap {
+    font-size: 0.6em;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 400px) {
+  #color-build-form-wrap {
+    width: 100%;
+  }
+}
+
+label[for="green"] {
+  color: #36c969;
+}
+
+label[for="blue"] {
+  color: #207bea;
+}
+
+label[for="alpha"] {
+  color: #595656;
+}
+
+#pow {
+  width: 0;
+  height: 0;
+  border-left: 4.375em solid transparent;
+  border-right: 3.750em solid transparent;
+  border-bottom: 6.250em solid #bf3333;
+  position: relative;
+  margin: 1em;
+  z-index: 1;
+}
+#pow:before {
+  width: 0;
+  height: 0;
+  border-left: 1.563em solid transparent;
+  border-right: 6.563em solid transparent;
+  border-top: 3.125em solid #bf3333;
+  position: absolute;
+  content: "";
+  top: 1.875em;
+  left: -3.125em;
+  transform: rotate(340deg);
+}
+#pow:after {
+  width: 0;
+  height: 0;
+  border-left: 3.125em solid transparent;
+  border-right: 5.625em solid transparent;
+  border-top: 6.250em solid #bf3333;
+  position: absolute;
+  content: "";
+  top: 1.875em;
+  left: -3.125em;
+  transform: rotate(12deg);
+}
+#pow div {
+  position: absolute;
+  top: 1.5em;
+  left: -4em;
+  z-index: 1000;
+  transform: rotate(-5deg);
+}
+
+#color-builder {
+  position: absolute;
+  top: 3em;
+  left: 8.5em;
+  z-index: 2;
+}
+
+#color-window {
+  background-color: #2d2d69;
 }
 
 #md-profile-card a {
