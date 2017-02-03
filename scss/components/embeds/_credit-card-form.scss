@@ -1,14 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
-
-/*body {
-    font-size: 16px;
-    font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
-    box-sizing: border-box;
-    color: #4d604d;
-    background-color: #e2f2e1;
-    background-image: url(green_wave.png);
-}*/
-
 #cc-form {
   color: #4d604d;
   background-color: #e2f2e1;
@@ -37,67 +26,66 @@
 #input-wrap {
   padding: 0.625em;
   margin: 1em;
-}
-
-#input-wrap:after {
-  content: '';
-  position: absolute;
-  top: -0.625em;
-  left: -2%;
-  width: 103.2%;
-  height: 104%;
-  border-radius: 10px;
-  border: dotted 2px white;
-  z-index: -1;
+  &:after {
+    content: '';
+    position: absolute;
+    top: -0.625em;
+    left: -2%;
+    width: 103.2%;
+    height: 104%;
+    border-radius: 10px;
+    border: dotted 2px white;
+    z-index: -1;
+  }
 }
 
 .input-group {
   margin-top: 1em;
   text-align: right;
   vertical-align: middle;
-}
-
-.input-group label {
-  margin: 0em 0.4em 0em 0em;
-}
-
-.input-group input {
-  width: 69%;
-  text-align: left;
-  height: 2.25em;
-  padding-left: 0.4em;
-  border: dotted 1px #e2f2e1;
-  border-radius: 5px;
-  outline: none;
-  background-color: white;
-}
-
-.input-group select {
-  width: 35.1%;
-  height: 2.25em;
-  border-radius: 5px;
-  padding-left: 0.4em;
-  border: dotted 1px #e2f2e1;
-  background-color: white;
-  outline: none;
-  color: #4d604d;
+  & label {
+    margin: 0em 0.4em 0em 0em;
+  }
+  %focus-styles {
+    border: dotted 1px #3c2415;
+  }
+  & input {
+    width: 69%;
+    text-align: left;
+    height: 2.25em;
+    padding-left: 0.4em;
+    border: dotted 1px #e2f2e1;
+    border-radius: 5px;
+    outline: none;
+    background-color: white;
+    &:focus {
+      @extend %focus-styles;
+    }
+  }
+  & select {
+    width: 35.1%;
+    height: 2.25em;
+    border-radius: 5px;
+    padding-left: 0.4em;
+    border: dotted 1px #e2f2e1;
+    background-color: white;
+    outline: none;
+    color: #4d604d;
+    &:focus {
+      @extend %focus-styles;
+    }
+  }
 }
 
 #submit-button {
   text-align: right;
 }
 
-.input-group input:focus,
-.input-group select:focus {
-  border: dotted 1px #3c2415;
-}
-
 .icons {
   margin-left: 1em;
-}
-
-.icons i {
-  padding-left: 0.25em;
+  & i {
+    padding-left: 0.25em;
+  }
 }
 
 .txt-right {
@@ -117,44 +105,41 @@
   width: 27em;
   text-align: left;
   transition-duration: 0.5s;
-}
-
-#cvc-q:after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 10px solid #e2f2e1;
-  opacity: 1;
-  position: relative;
-  bottom: -28px;
-  left: -38px;
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 10px solid #e2f2e1;
+    opacity: 1;
+    position: relative;
+    bottom: -28px;
+    left: -38px;
+  }
 }
 
 #cvc-label:hover {
   cursor: help;
+  & > span#cvc-q {
+    opacity: 1;
+  }
 }
 
-#cvc-label:hover > span#cvc-q {
-  opacity: 1;
-}
-
-
-/* form validation classes */
-
-.invalid input {
+%invalid-form-styles {
   background-color: rgba(255, 181, 181, 1);
   margin-bottom: 0;
   border-radius: 5px 5px 0 0;
   border-color: rgba(188, 19, 57, 1);
 }
 
-.invalid select {
-  background-color: rgba(255, 181, 181, 1);
-  margin-bottom: 0;
-  border-radius: 5px 5px 0 0;
-  border-color: rgba(188, 19, 57, 1);
+.invalid {
+  & input {
+    @extend %invalid-form-styles;
+  }
+  & select {
+    @extend %invalid-form-styles;
+  }
 }
 
 .error {
@@ -172,16 +157,7 @@
   margin-left: 31.1%;
 }
 
-
-/* ------------------------------------
-Button styling
---------------------------------------- */
-
-.button:focus {
-  outline: none;
-}
-
-.button {
+.cc-button {
   display: inline-block;
   color: #4d604d;
   font-size: 1.25em;
@@ -192,15 +168,16 @@ Button styling
   border-radius: 5px;
   cursor: pointer;
   margin-top: 0.8em;
-}
-
-.button:hover {
-  color: #3c2415;
-  background-color: #e2f2e1;
-}
-
-.button:active {
-  background-color: #3c2415;
-  color: white;
-  border: solid 1px #3c2415;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: #3c2415;
+    background-color: #e2f2e1;
+  }
+  &:active {
+    background-color: #3c2415;
+    color: white;
+    border: solid 1px #3c2415;
+  }
 }

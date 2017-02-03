@@ -4,7 +4,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,400i|Lato:100,300,400,700|Bangers|Source+Code+Pro:400,700");
 @import url(https://fonts.googleapis.com/css?family=Inconsolata:700);
 @import url(https://fonts.googleapis.com/css?family=Rubik:300,500);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -2447,14 +2446,6 @@ input[name="thumbs"]:checked + img {
     transform: scale(1);
   }
 }
-/*body {
-    font-size: 16px;
-    font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
-    box-sizing: border-box;
-    color: #4d604d;
-    background-color: #e2f2e1;
-    background-image: url(green_wave.png);
-}*/
 #cc-form {
   color: #4d604d;
   background-color: #e2f2e1;
@@ -2484,7 +2475,6 @@ input[name="thumbs"]:checked + img {
   padding: 0.625em;
   margin: 1em;
 }
-
 #input-wrap:after {
   content: '';
   position: absolute;
@@ -2502,11 +2492,12 @@ input[name="thumbs"]:checked + img {
   text-align: right;
   vertical-align: middle;
 }
-
 .input-group label {
   margin: 0em 0.4em 0em 0em;
 }
-
+.input-group input:focus, .input-group select:focus {
+  border: dotted 1px #3c2415;
+}
 .input-group input {
   width: 69%;
   text-align: left;
@@ -2517,7 +2508,6 @@ input[name="thumbs"]:checked + img {
   outline: none;
   background-color: white;
 }
-
 .input-group select {
   width: 35.1%;
   height: 2.25em;
@@ -2533,15 +2523,9 @@ input[name="thumbs"]:checked + img {
   text-align: right;
 }
 
-.input-group input:focus,
-.input-group select:focus {
-  border: dotted 1px #3c2415;
-}
-
 .icons {
   margin-left: 1em;
 }
-
 .icons i {
   padding-left: 0.25em;
 }
@@ -2564,7 +2548,6 @@ input[name="thumbs"]:checked + img {
   text-align: left;
   transition-duration: 0.5s;
 }
-
 #cvc-q:after {
   content: '';
   width: 0;
@@ -2581,20 +2564,11 @@ input[name="thumbs"]:checked + img {
 #cvc-label:hover {
   cursor: help;
 }
-
 #cvc-label:hover > span#cvc-q {
   opacity: 1;
 }
 
-/* form validation classes */
-.invalid input {
-  background-color: #ffb5b5;
-  margin-bottom: 0;
-  border-radius: 5px 5px 0 0;
-  border-color: #bc1339;
-}
-
-.invalid select {
+.invalid input, .invalid select {
   background-color: #ffb5b5;
   margin-bottom: 0;
   border-radius: 5px 5px 0 0;
@@ -2616,14 +2590,7 @@ input[name="thumbs"]:checked + img {
   margin-left: 31.1%;
 }
 
-/* ------------------------------------
-Button styling
---------------------------------------- */
-.button:focus {
-  outline: none;
-}
-
-.button {
+.cc-button {
   display: inline-block;
   color: #4d604d;
   font-size: 1.25em;
@@ -2635,13 +2602,14 @@ Button styling
   cursor: pointer;
   margin-top: 0.8em;
 }
-
-.button:hover {
+.cc-button:focus {
+  outline: none;
+}
+.cc-button:hover {
   color: #3c2415;
   background-color: #e2f2e1;
 }
-
-.button:active {
+.cc-button:active {
   background-color: #3c2415;
   color: white;
   border: solid 1px #3c2415;
